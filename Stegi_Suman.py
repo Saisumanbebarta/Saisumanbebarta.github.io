@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter.filedialog import *
 from stegano import exifHeader as stg
 from tkinter import messagebox
-
+import glob
 def encode():
     main.destroy()
     enc = Tk()
@@ -51,11 +51,33 @@ def decode():
     buttonselect.place(relx=0.1, rely=0.3)
     buttonencode = Button(text="Decode", command=decodee)
     buttonencode.place(relx=0.4, rely=0.5)
+
+def decodei():
+    main.destroy()
+    dnc = Tk()
+    dnc.title("decode")
+    dnc.geometry("500x400+300+150")
+    magic_numbers = {'jpg': bytes([0xFF, 0xD8, 0xFF, 0xE0])}
+    for x in glob.glob("*jpg"):
+        with open(x, 'rb') as fd:
+            file_data = fd.read()
+            print("Detected " + str(file_data.count(magic_numbers['jpg'])) + " JPG files in file : " + fd.name)
+            if file_data.count(magic_numbers['jpg']) > 1:
+                print("Trying to extract embedded files")
+                for f in range(file_data.count(magic_numbers['jpg'])):
+                    with open(str(f + 1) + ".jpg", "wb") as ff:
+                        ff.write(magic_numbers['jpg'] + file_data.split(magic_numbers['jpg'])[f + 1])
+                        print("Generated file : " + str(f + 1) + ".jpg")
+    messagebox.showinfo("pop up", "successfully Decoded Image")
+
+
 main = Tk()
 main.title("img stegano")
 main.geometry("500x400+300+150")
-encodeb = Button(text='Encode', command=encode)
-encodeb.place(relx=0.3, rely=0.3, height=40, width=80)
-decodeb = Button(text='Decode', command=decode)
-decodeb.place(relx=0.5, rely=0.3, height=40, width=80)
+encodeb = Button(text='Encode Message', command=encode)
+encodeb.place(relx=0.2, rely=0.3, height=40, width=100)
+decodeb = Button(text='Decode Message', command=decode)
+decodeb.place(relx=0.4, rely=0.3, height=40, width=100)
+decodebi = Button(text='Decode Image', command=decodei)
+decodebi.place(relx=0.6, rely=0.3, height=40, width=100)
 main.mainloop()
