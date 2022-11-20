@@ -2441,5 +2441,11 @@ input, select, textarea {
 					#copyright li:first-child {
 						margin-top: 0;
 					}
+		.image{
 
+		}
+		.image cen{
+			border-radius: 50%;
+
+		}
 	}
