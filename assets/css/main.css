@@ -2454,11 +2454,14 @@ input, select, textarea {
 	}
 	#preloader{
 		background: #262626 url(images/loader.gif) no-repeat center center;
-		background-size: 20%;
-		height: 100vh;
+		background-size: 25%;
+		height: 100%;
 		width: 100%;
 		position:fixed;
 		z-index: 100;
+		vertical-align:middle;
+		
+
 	
 	}
 	
