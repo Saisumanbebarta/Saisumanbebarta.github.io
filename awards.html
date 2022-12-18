@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		 <!-- loader -->
+  <div id="preloader"></div>
         <nav id="nav">
             <ul class="container">
                 <li><a href="index.html#top">HOME</a></li>
@@ -48,6 +50,25 @@
                 </ul>
             </footer>
         </div>
-    </article>		
+    </article>
+ <!-- loader -->
+  <script>
+    const fadeEffect = setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity > 0) {
+        preloader.style.opacity -= 0.1;
+      } else {
+        clearInterval(fadeEffect);
+      }
+    }, 100);
+    window.addEventListener('load', fadeEffect);
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+      setTimeout(function () { loader.style.display = "none" },1000);
+    })
+  </script>
+  <!-- loader -->	
 </body>
     
