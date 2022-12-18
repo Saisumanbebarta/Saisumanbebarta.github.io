@@ -10,6 +10,8 @@
         
 	</head>
 	<body class="is-preload">
+		<!-- loader -->
+	 <div id="preloader"></div>
         <nav id="nav">
             <ul class="container">
                 <li><a href="index.html#top">HOME</a></li>
@@ -73,4 +75,13 @@
             </ul>
         </footer>
     </div>
-</article>		
+</article>	
+<!-- loader -->
+	<script>
+		var loader = document.getElementById("preloader");
+		window.addEventListener("load", function () {
+			loader.style.display = "none";
+		})
+	</script>
+	<!-- loader -->
+</body>
