@@ -2448,4 +2448,17 @@ input, select, textarea {
 			border-radius: 50%;
 
 		}
+
+		/* DFS */
+		
 	}
+	#preloader{
+		background: #262626 url(images/loader.gif) no-repeat center center;
+		background-size: 20%;
+		height: 100vh;
+		width: 100%;
+		position:fixed;
+		z-index: 100;
+	
+	}
+	
