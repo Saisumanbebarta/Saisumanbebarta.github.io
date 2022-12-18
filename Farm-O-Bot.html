@@ -7,6 +7,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+        <!-- loader -->
+  <div id="preloader"></div>
+  <!-- Nav -->
         <nav id="nav">
             <ul class="container">
                 <li><a href="index.html#top">HOME</a></li>
@@ -41,11 +44,11 @@
                 </div>
                 <p></p>
                 <h2>FARM-O-BOT ACHIEVEMENTS</h2>
-                <h3><a style="color:cyan ;" href="https://ideateforindia.negd.in/results/final.pdf">1. Top 50 Ideas of India(Ideate For India)</a></h3>
+                <h3><a style="color:red ;" href="https://ideateforindia.negd.in/results/final.pdf">1. Top 50 Ideas of India(Ideate For India)</a></h3>
                 <p><h3>2. WRO INDIA (2nd Prize)</h3></p>
                 <p><h3>3. CBSE State Level Winner</h3></p>
                 <p><h3>4. 1st Prize in ISRO Science Exhibition</h3></p>
-                <h3><a style="color:cyan ;" href="https://ideateforindia.negd.in/results/east-zone.pdf">5. Top 10 Ideas of Odisha(Ideate For India)</a></h3>
+                <h3><a style="color:red ;" href="https://ideateforindia.negd.in/results/east-zone.pdf">5. Top 10 Ideas of Odisha(Ideate For India</a></h3>
                 </div>
                 
             </div>
@@ -74,4 +77,15 @@
             </ul>
         </footer>
     </div>
-</article>		
+</article>	
+<!-- loader -->
+<script>
+		
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+        setTimeout(function(){loader.style.display = "none"},1000);
+        
+    })
+</script>
+<!-- loader -->
+</body>	

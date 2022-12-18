@@ -6,7 +6,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-		<div id="preloader"></div>
+        <!-- loader -->
+  <div id="preloader"></div>
+  <!-- Nav -->
         <nav id="nav">
             <ul class="container">
                 <li><a href="index.html#top">HOME</a></li>
@@ -105,12 +107,14 @@
             </footer>
         </div>
     </article>	
-<!-- loader -->
+    <!-- loader -->
 	<script>
+		
 		var loader = document.getElementById("preloader");
 		window.addEventListener("load", function () {
-			loader.style.display = "none";
+			setTimeout(function(){loader.style.display = "none"},1000);
+			
 		})
 	</script>
 	<!-- loader -->
-</body>
+    </body>	
