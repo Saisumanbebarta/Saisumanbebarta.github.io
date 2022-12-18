@@ -11,7 +11,7 @@
 
 <body class="is-preload">
 	 <!-- loader -->
-	 <div id="preloader"></div>
+  <div id="preloader"></div>
 	<!-- Nav -->
 	<nav id="nav">
 		<ul class="container">
@@ -183,12 +183,14 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	
 	<!-- loader -->
 	<script>
 		
 		var loader = document.getElementById("preloader");
 		window.addEventListener("load", function () {
 			setTimeout(function(){loader.style.display = "none"},1000);
+			loader.fadeOut("slow")
 			
 		})
 	</script>
