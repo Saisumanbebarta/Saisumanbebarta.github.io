@@ -79,12 +79,21 @@
 </article>		
 <!-- loader -->
 <script>
-		
+
     var loader = document.getElementById("preloader");
     window.addEventListener("load", function () {
-        setTimeout(function(){loader.style.display = "none"},1000);
-        
+        var now = new Date();
+        var uptoTime = new Date(now.getTime() + 2000);
+
+        var op = 1;
+        setInterval(() => {
+            op = op - 0.05;
+            loader.style.opacity = op
+            if (new Date().getTime() > uptoTime) {
+                loader.style.display = "none";
+            }
+        }, 100);
     })
 </script>
-<!-- loader -->
+<!-- loader -->
 </body>
