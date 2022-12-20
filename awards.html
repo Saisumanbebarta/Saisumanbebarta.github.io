@@ -57,11 +57,11 @@
   var loader = document.getElementById("preloader");
   window.addEventListener("load", function () {
     var now = new Date();
-    var uptoTime = new Date(now.getTime() + 2000);
+    var uptoTime = new Date(now.getTime() + 1000);
 
     var op = 1;
     setInterval(() => {
-      op = op - 0.05;
+      op = op - 0.1;
       loader.style.opacity = op
       if (new Date().getTime() > uptoTime) {
         loader.style.display = "none";
