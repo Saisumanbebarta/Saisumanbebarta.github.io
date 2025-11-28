@@ -1,330 +1,152 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Sai Suman Bebarta</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/jpg" href="images/Sai.png" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sai Suman Bebarta</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
-<style>
-  /* Styles for modal */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
-  }
-  .modal-content {
-    margin: 5% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 700px;
-    background-color: #fefefe;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    animation-name: modalopen;
-    animation-duration: 0.8s;
-  }
-  @keyframes modalopen {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .button-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .button-container button {
-    margin: 0 10px;
-  }
-</style>
-</head>
-<body>
+<body class="index-page">
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-   <img src="images/OTVTN.jpg" alt="Popup Image"  style="width:100%;border-radius: 5%;">
-    <p>Check out the video to witness the hard work and creativity that went into making it a reality.</p>
-    <div class="button-container">
-      <button class="modal-open-btn" data-url="https://www.facebook.com/share/v/ySvRu97juM88TdfB/?mibextid=xfxF2i">WATCH ON FACEBOOK</button>
-      <button class="modal-open-btn" data-url="https://www.youtube.com/watch?v=GeKe0BmYiB8&t=0s">WATCH ON YOUTUBE</button>
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <h1 class="sitename">SSB</h1> 
+    </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ACHIEVEMENTS.html">Achievements</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/Saisumanbebarta" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.facebook.com/saisuman.bebarta.3" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/saisumanbebarta/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
     </div>
-  </div>
-</div>
+  </header>
 
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
+  <main class="main">
 
-// Get the buttons that open the modal
-var btns = document.querySelectorAll(".modal-open-btn");
+  
+    <section id="hero" class="hero section">
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-// When the page loads, display the modal
-window.onload = function() {
-  modal.style.display = "block";
-}
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content">
+              <h1 data-aos="fade-up" data-aos-delay="200">Hello, I'm <span class="highlight">Sai Suman Bebarta</span></h1>
+              <h2 data-aos="fade-up" data-aos-delay="300">Passionate <span class="typed" data-typed-items="Robotics Engineer, AI Developer, IoT Developer, App Developer, Cyclist"></span></h2>
+              <p data-aos="fade-up" data-aos-delay="400">I’m a multi-domain developer passionate about building intelligent and 
+                future-ready solutions. I work across robotics, AI/ML, IoT, drones, and application development—bringing ideas to 
+                life through code, innovation, and engineering. Outside tech, I stay highly active in fitness, because a strong mindset 
+                matters both in the gym and in development.</p>
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                <a href="projects.html" class="btn btn-primary">View My Work</a>
+              </div>
+              <div class="social-links" data-aos="fade-up" data-aos-delay="600">
+                <a href="https://www.instagram.com/saisumanbebarta/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/Saisumanbebarta"><i class="bi bi-github"></i></a>
+                <a href="https://www.facebook.com/saisuman.bebarta.3"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+              <div class="image-wrapper">
+                <img src="images/saisuman1.jpg" alt="Sarah Mitchell" class="img-fluid">
+                <div class="floating-elements">
+                  <div class="floating-card design" data-aos="fade-left" data-aos-delay="700">
+                    <i class="bi bi-palette"></i>
+                    <span>Explore</span>
+                  </div>
+                  <div class="floating-card code" data-aos="fade-right" data-aos-delay="800">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Code</span>
+                  </div>
+                  <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
+                    <i class="bi bi-lightbulb"></i>
+                    <span>Ideas</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-// When the user clicks on any button, redirect accordingly
-btns.forEach(function(btn) {
-  btn.onclick = function() {
-    var redirectUrl = btn.getAttribute("data-url");
-    window.location.href = redirectUrl;
-  }
-});
+      </div>
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    </section>
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+  </main>
 
-<body class="is-preload">
-    <!-- loader -->
- <div id="preloader"></div>
-   <!-- Nav -->
-   <nav id="nav">
-       <ul class="container">
-           <li><a href="#top">Home</a></li>
-           <li><a href="#work">Projects</a></li>
-           <li><a href="#portfolio">Awards</a></li>
-           <li><a href="#PROGRAMS">Programs</a></li>
-       </ul>
-   </nav>
-   <!-- Home -->
-   <article id="top" class="wrapper style1">
-       <div class="container">
-           <div class="row">
-               <div class="col-4 col-5-large col-12-medium">
-                   <span class="image fit"><img src="images/Sai.jpg" alt="" /></span>
-               </div>
-               <div class="col-8 col-7-large col-12-medium">
-                   <header>
-                       <h1>Hi. I'm <strong>Sai Suman Bebarta</strong>.</h1>
-                   </header>
-                   <h3>I am a student of <a>Kalinga Institute of Idustrial Technology</a> pursuing my 1st year of B.Tech under CSE branch. Apart from that I really love to find problems
-                       in
-                       the community and solve it. </h3>
-                   <a class="button large scrolly"  href="me.html">Learn more about me</a>
-               </div>
-           </div>
-       </div>
-   </article>
-   <!-- Work -->
-   <article id="work" class="wrapper style2" >
-       <div class="container">
-           <header>
-               <h2>projects</h2>
-           </header>
-           <div class="row aln-center">
-               <div class="col-4 col-6-medium col-12-small">
-                   <section class="box style1">
-                       <span class="image fit"><img src="images/Farm-o-bot.jpg" alt="" /></span>
-                       <p></p>
-                       <h2><a style="color:rgb(0, 217, 255);" href="Farm-O-Bot.html">Farm-O-Bot</a></h2>
-                       <h4>A boon for people with disability.</h4>
-                   </section>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <section class="box style1">
-                       <span class="image fit"><img src="images/EXBOSYS.jpg" alt="" /></span>
-                       <p> </p>
-                       <h2><a style="color:rgb(0, 217, 255);" href="EXBOSYS.html">EXBOSYS</a></h2>
-                       <h4>The fire Extinguiher system</h4>
-                   </section>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <section class="box style1">
-                       <span class="image fit"><img src="images/SWAKAR.jpg" alt="" /></span>
-                       <p></p>
-                       <h2><a style="color:rgb(0, 217, 255);" href="SWAKAR.html">SWAKAR</a></h2>
-                       <h4>Small steps towards Swachh Bharat</h4>
-                   </section>
-               </div>
-           </div>
-       </div>
-   </article>
-   <!-- Portfolio -->
-   <article id="portfolio" class="wrapper style3" >
-       <div class="container">
-           <header>
-               <h2>Here are some of the Awards that I won.</h2>
-               <p></p>
-           </header>
-           <div class="row">
-               <div class="col-4 col-6-medium col-12-small">
-                   <article class="box style2">
-                       <a class="image featured"><img src="images/WRO1.jpg" alt="" /></a>
-                       <h3>2nd in WRO India</h3>
-                       <p>Open Category</p>
-                   </article>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <article class="box style2">
-                       <a class="image featured"><img src="images/WRO THAILAND.jpg" alt="" /></a>
-                       <h3>WRO THAILAND</h3>
-                       <p>Invited as guest teams</p>
-                   </article>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <article class="box style2">
-                       <a class="image featured"><img src="images/ATL STUDENT.jpg" alt="" /></a>
-                       <h3>ATL Student Innovator</h3>
-                       <p>Given by NITI AYOG, Govt. of India</p>
-                   </article>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <article class="box style2">
-                       <a class="image featured"><img src="images/TOP50.jpg" alt="" /></a>
-                       <h3>Top 50 Ideas of India in Ideate For India</h3>
-                       <p>Organised by Intel and Govt. of India</p>
-                   </article>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <article class="box style2">
-                       <a class="image featured"><img src="images/RAJIV.jpg" alt="" /></a>
-                       <h3>Rajiv Gandhi Prativa Puraskar</h3>
-                       <p>State Level</p>
-                   </article>
-               </div>
-               <div class="col-4 col-6-medium col-12-small">
-                   <article class="box style2">
-                       <a class="image featured"><img src="images/ISRO.jpg" alt="" /></a>
-                       <h3>1st Prize in ISRO Science Exhibition</h3>
-                       <p>Organised by SOA University and ISRO</p>
-                   </article>
-               </div>
-           </div>
-           <p></p>
-           <a class="button large scrolly" href="awards.html">All Awards</a>
-       </div>
-   </article>
+  <footer id="footer" class="footer">
 
-   <!-- PROGRAMS MADE BY ME -->
-   <article id="PROGRAMS" class="wrapper style2" >
-       <div class="container">
-           <header>
-               <h2>PROGRAMS</h2>
-           </header>
-           <div class="row">
-                   <div class="col-4 col-6-medium col-12-small">
-                       <article class="box style3">
-                           <a class="image featured"><img src="images/Stego.jpeg" alt="" /></a>
-                           <a class="button large scrolly" href="stego.html">Stego Tool</a>
-                           <p>Python Program</p>
-                       </article>
-                       <p></p>
-                       </div>
-                       <div class="col-4 col-6-medium col-12-small">
-                           <article class="box style3">
-                               <a class="image featured"><img src="images/SCHOLIFY.png" alt="" /></a>
-                               <a class="button large scrolly" href="scholify.html">scholify</a>
-                               <h1></h1>
-                               <p>Python Program</p>
-                           </article>
-                           <p></p>
-                           </div>
-                           <div class="col-4 col-6-medium col-12-small">
-                               <article class="box style3">
-                                   <a class="image featured"><img src="images/SNAPIMG.jpg" alt="" /></a>
-                                   <a class="button large scrolly" href="snapsense1.html">SNAPSENSE</a>
-                                   <h1></h1>
-                                   <p>Python Program</p>
-                               </article>
-                               <p></p>
-                               </div>
-                           
-               </div>	
-               <div>
-                   
-                   
-   </article>
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/Saisumanbebarta"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/saisuman.bebarta.3"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/saisumanbebarta/"><i class="bi bi-instagram"></i></a>
+        
+      </div>
+    </div>
 
-   <!-- Contact -->
-   <article id="contact" class="wrapper style4">
-       <div class="container medium">
-           <header>
-               <h2>CONTACT</h2>
-               <h4>For any support please contact me at <a style="color: darkcyan;" href="mailto:saisumanbebarta1@gmail.com">saisumanbebarta1@gmail.com</a></h4>
-           </header>
-           <div class="row">
-           </div>
-           <hr />
-           <h3>Find me on ...</h3>
-           <ul class="social">
-               <li><a href="https://www.instagram.com/saisumanbebarta/" class="icon brands fa-instagram"><span
-                           class="label">instagram</span></a></li>
-               <li><a href="https://www.facebook.com/saisuman.bebarta.3" class="icon brands fa-facebook-f"><span
-                           class="label">Facebook</span></a></li>
-               <li><a href="https://github.com/Saisumanbebarta" class="icon brands fa-github"><span
-                           class="label">Github</span></a></li>
-           </ul>
-           <hr />
-       </div>
-       </div>
-       <footer>
-           <ul id="copyright">
-               <li>&copy; Sai Suman Bebarta. All rights reserved.</li>
-           </ul>
-       </footer>
-       </div>
-   </article>
-   <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/jquery.scrolly.min.js"></script>
-   <script src="assets/js/browser.min.js"></script>
-   <script src="assets/js/breakpoints.min.js"></script>
-   <script src="assets/js/util.js"></script>
-   <script src="assets/js/main.js"></script>
-   
-   <!-- loader -->
-   <script>
-       var loader = document.getElementById("preloader");
-       window.addEventListener("load", function () {
-           var now = new Date();
-           var uptoTime = new Date(now.getTime() + 2000);
+  </footer>
 
-           var op = 1;
-           setInterval(() => {
-               op = op - 0.05;
-               loader.style.opacity = op
-               if (new Date().getTime() > uptoTime) {
-                   loader.style.display = "none";
-               }
-           }, 100);
-       })
-   </script>
-   <!-- loader -->
+  
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+ 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
