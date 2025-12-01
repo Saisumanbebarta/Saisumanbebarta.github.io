@@ -28,6 +28,121 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgb(240, 240, 240,0.2);
+  }
+  .modal-content {
+    margin: 5% auto;
+    color: #3f9cca;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    background-color: rgb(15, 24, 30);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 0.8s;
+    padding-top: 50px; /* creates space for X button */
+  }
+  @keyframes modalopen {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .close {
+    position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .button-container button {
+   background-color: rgb(57, 139, 180);
+  color: white;
+  padding: 10px 22px;
+   margin: 0 30px;
+  border: none;
+  border-radius: 30px; /* 🔥 Rounded Button */
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  }
+</style>
+
+<body>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <img src="images/OTVTN.jpg" alt="Popup Image"  style="width:100%;border-radius: 5%;">
+   <p></p>
+    <p>Check out the video to witness the hard work and creativity that went into making it a reality.</p>
+    <div class="button-container">
+      <button class="modal-open-btn" data-url="https://www.facebook.com/share/v/ySvRu97juM88TdfB/?mibextid=xfxF2i">WATCH ON FACEBOOK</button>
+      <button class="modal-open-btn" data-url="https://www.youtube.com/watch?v=GeKe0BmYiB8&t=0s">WATCH ON YOUTUBE</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the buttons that open the modal
+var btns = document.querySelectorAll(".modal-open-btn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the page loads, display the modal
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on any button, redirect accordingly
+btns.forEach(function(btn) {
+  btn.onclick = function() {
+    var redirectUrl = btn.getAttribute("data-url");
+    window.location.href = redirectUrl;
+  }
+});
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 <body class="index-page">
 
