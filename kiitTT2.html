@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>KIIT TIME TABLE</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  
+  <link rel="icon" type="image/png" href="images/Sai.png">
+<link rel="apple-touch-icon" href="images/Sai.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.webp" alt="">
+      <h1 class="sitename">FolioOne</h1>
+    </a> -->
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="ACHIEVEMENTS.html">Achievements</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="kiitTT2.html" class="active">KIIT TIME TABLE</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/Saisumanbebarta" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.facebook.com/saisuman.bebarta.3" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/saisumanbebarta/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Timetable Section -->
+    <section id="timetable-section" class="starter-section section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Class Timetable</h2>
+        <p>Select your <strong>Section</strong> and <strong>Day</strong> to see your classes and room numbers.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+
+                <!-- Controls -->
+                <form class="row gy-3 align-items-end mb-3">
+                  <div class="col-md-5">
+                    <label for="sectionSelect"
+                      class="form-label small text-uppercase fw-semibold text-secondary">Section</label>
+                    <select id="sectionSelect" class="form-select">
+                      <!-- Filled by JS from timetable data -->
+                    </select>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label for="daySelect" class="form-label small text-uppercase fw-semibold text-secondary">Day</label>
+                    <select id="daySelect" class="form-select">
+                      <option value="monday">Monday</option>
+                      <option value="tuesday">Tuesday</option>
+                      <option value="wednesday">Wednesday</option>
+                      <option value="thursday">Thursday</option>
+                      <option value="friday">Friday</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-2 d-grid">
+                    <button type="button" id="showButton" class="btn btn-primary">
+                      Show
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Timetable Table -->
+                <div class="table-responsive">
+                  <table class="table table-sm align-middle mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Room</th>
+                      </tr>
+                    </thead>
+                    <tbody id="timetableBody">
+                      <!-- Rows will be injected by JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Timetable Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/Saisumanbebarta"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/saisuman.bebarta.3"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/saisumanbebarta/"><i class="bi bi-instagram"></i></a>
+        
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Timetable JS (auto-parses your full text for CSE-1 to CSE-54) -->
+  <script>
+    // Raw timetable text you provided (CSE-1 to CSE-54)
+    // NOTE: Don't edit this unless your timetable changes.
+    const rawTimetableText = `
+MON(1)	CSE-1	---	X	C25-A-118	OS	DBMS	C25-A-118	DM	C25-A-118	OOPJ	X	---	X	C25-A-103(L)	VT(L)	C25-A-103(L)	VT(L)	X
+TUE(0)	CSE-1	C25-A-214	DM	C25-A-214	COA	ED|IOC|OB	C25-A-214	OOPJ	C25-A-304(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+WED(0)	CSE-1	C25-A-301	DBMS	C25-A-304(L)	OS(L)	OS(L)	C25-A-218	COA	C25-A-218	ED|IOC|OB	X	---	X	---	X	---	X	X
+THU(1)	CSE-1	---	X	C25-A-314	X	ED|IOC|OB	C25-A-314	DM	C25-A-314	OOPJ	X	---	X	C25-A-207	OS	C25-A-207	COA	X
+FRI(1)	CSE-1	---	X	C25-A-214	X	COA	C25-A-214	DM	C25-A-214	DBMS	X	---	X	C25-A-007	OS	C25-A-102(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-2	---	X	C25-A-214	X	COA	C25-A-214	OS	C25-A-212(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-A-206	DBMS	ED|IOC|OB
+TUE(1)	CSE-2	---	X	C25-B-318(L)	VT(L)	VT(L)	C25-B-109	DM	C25-B-109	OS	X	---	X	C25-A-201	COA	C25-A-201	OOPJ	X
+WED(0)	CSE-2	C25-A-306	OOPJ	C25-A-312(L)	DBMS(L)	DBMS(L)	C25-B-319	DM	C25-B-319	ED|IOC|OB	X	---	X	---	X	---	X	X
+THU(0)	CSE-2	---	X	---	X	X	C25-B-301	DM	C25-B-301	COA	X	---	X	C25-A-113	DBMS	C25-A-003(L)	OS(L)	OS(L)
+FRI(1)	CSE-2	---	X	C25-A-215	X	OOPJ	C25-A-215	ED|IOC|OB	C25-A-215	DBMS	OS	---	X	---	X	C25-A-007	DM	COA
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-3	C25-A-215	OOPJ	C25-A-215	OS	DM	C25-B-319	ED|IOC|OB	C25-B-319	COA	DBMS	---	X	---	X	---	X	X
+TUE(1)	CSE-3	---	X	---	X	X	C25-A-215	DM	C25-A-215	COA	X	---	X	C25-A-210	OS	C25-A-102(L)	OOPJ(L)	OOPJ(L)
+WED(1)	CSE-3	---	X	C25-B-003(L)	VT(L)	VT(L)	C25-A-114	COA	C25-A-114	OS	X	---	X	C25-A-006	DM	C25-A-006	ED|IOC|OB	X
+THU(1)	CSE-3	---	X	C25-A-315	X	OOPJ	C25-A-315	ED|IOC|OB	C25-A-315	DBMS	COA	---	X	---	X	C25-A-102(L)	DBMS(L)	DBMS(L)
+FRI(0)	CSE-3	C25-A-201	DBMS	C25-B-004(L)	OS(L)	OS(L)	C25-B-219	OOPJ	C25-B-219	DM	X	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-4	---	X	C25-A-216	X	COA	C25-A-216	DBMS	C25-A-302(L)	OS(L)	OS(L)	---	X	---	X	C25-A-207	DM	OS
+TUE(0)	CSE-4	C25-A-215	COA	C25-A-215	OS	DM	C25-A-216	DBMS	C25-A-216	OOPJ	ED|IOC|OB	---	X	---	X	---	X	X
+WED(0)	CSE-4	---	X	---	X	X	C25-B-309	OS	C25-B-309	DM	X	---	X	---	X	C25-A-304(L)	OOPJ(L)	OOPJ(L)
+THU(0)	CSE-4	C25-A-110	COA	C25-A-304(L)	VT(L)	VT(L)	C25-A-216	OOPJ	C25-A-216	ED|IOC|OB	DM	---	X	---	X	---	X	X
+FRI(1)	CSE-4	---	X	C25-A-216	X	COA	C25-A-216	OOPJ	C25-A-312(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-008	ED|IOC|OB	DBMS
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-5	C25-A-218	ED|IOC|OB	C25-A-218	DBMS	OS	C25-A-218	COA	C25-A-303(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-5	---	X	---	X	X	C25-A-318	OOPJ	C25-A-318	DM	X	---	X	C25-A-211	COA	C25-A-103(L)	OS(L)	OS(L)
+WED(1)	CSE-5	---	X	C25-A-314	X	DM	C25-A-314	ED|IOC|OB	C25-A-314	COA	X	---	X	C25-A-007	OOPJ	C25-A-007	DBMS	X
+THU(0)	CSE-5	C25-A-316	DM	C25-A-316	OOPJ	DBMS	C25-A-316	OS	C25-A-312(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+FRI(0)	CSE-5	C25-A-210	ED|IOC|OB	C25-B-118(L)	VT(L)	VT(L)	C25-B-307	DM	C25-B-307	OS	COA	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-6	---	X	---	X	X	C25-A-016	COA	C25-A-016	ED|IOC|OB	X	---	X	C25-A-207	DBMS	C25-A-302(L)	OS(L)	OS(L)
+TUE(0)	CSE-6	---	X	C25-A-216	OS	ED|IOC|OB	C25-A-314	OOPJ	C25-A-314	DBMS	DM	---	X	---	X	---	X	X
+WED(1)	CSE-6	---	X	C25-A-315	X	DM	C25-A-315	OS	C25-A-315	COA	X	---	X	C25-A-011	DBMS	C25-B-004(L)	OOPJ(L)	OOPJ(L)
+THU(1)	CSE-6	---	X	C25-A-318	X	DM	C25-A-102(L)	COA	C25-A-102(L)	VT(L)	VT(L)	---	X	---	X	C25-A-208	OS	OOPJ
+FRI(0)	CSE-6	C25-A-213	OOPJ	C25-B-203(L)	DBMS(L)	DBMS(L)	C25-B-306	DM	C25-B-306	ED|IOC|OB	COA	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-7	---	X	C25-A-314	COA	ED|IOC|OB	C25-A-314	DM	C25-A-314	DBMS	X	---	X	C25-B-318(L)	VT(L)	C25-B-318(L)	VT(L)	X
+TUE(0)	CSE-7	C25-A-201	OS	C25-B-102(L)	OS(L)	OS(L)	C25-B-110	COA	C25-B-110	ED|IOC|OB	OOPJ	---	X	---	X	---	X	X
+WED(0)	CSE-7	---	X	C25-A-316	DM	COA	C25-A-316	OOPJ	C25-B-004(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+THU(1)	CSE-7	---	X	C25-B-006	X	COA	C25-B-306	DBMS	C25-B-306	DM	X	---	X	C25-A-201	OS	C25-A-103(L)	OOPJ(L)	OOPJ(L)
+FRI(1)	CSE-7	---	X	C25-A-218	X	DM	C25-A-218	DBMS	C25-A-218	ED|IOC|OB	X	---	X	C25-A-009	OS	C25-A-009	OOPJ	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-8	---	X	C25-A-315	OOPJ	DM	C25-A-315	OS	C25-A-315	DBMS	X	---	X	C25-A-208	ED|IOC|OB	C25-A-208	COA	X
+TUE(1)	CSE-8	---	X	C25-B-103(L)	VT(L)	VT(L)	C25-B-119	DM	C25-B-119	DBMS	X	---	X	C25-A-206	COA	C25-A-206	OS	X
+WED(0)	CSE-8	---	X	C25-B-004(L)	OS(L)	OS(L)	C25-A-015	COA	C25-A-015	ED|IOC|OB	DM	---	X	---	X	---	X	X
+THU(0)	CSE-8	C25-B-007	OOPJ	C25-B-007	COA	DM	C25-B-007	DBMS	C25-B-004(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+FRI(1)	CSE-8	---	X	---	X	X	C25-B-309	ED|IOC|OB	C25-B-309	OOPJ	X	---	X	C25-A-008	OS	C25-A-103(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-9	---	X	C25-A-316	ED|IOC|OB	COA	C25-A-316	OS	C25-A-316	DM	X	---	X	---	X	---	X	X
+TUE(1)	CSE-9	---	X	C25-A-218	X	COA	C25-A-218	DM	C25-A-218	DBMS	X	---	X	C25-A-213	OOPJ	C25-A-104(L)	OOPJ(L)	OOPJ(L)
+WED(1)	CSE-9	---	X	C25-B-103(L)	VT(L)	VT(L)	C25-B-008	ED|IOC|OB	C25-B-008	COA	X	---	X	C25-A-008	OS	C25-A-008	DBMS	X
+THU(1)	CSE-9	---	X	C25-B-008	X	ED|IOC|OB	C25-B-102(L)	DBMS	C25-B-102(L)	OS(L)	OS(L)	---	X	---	X	C25-A-209	OOPJ	DM
+FRI(0)	CSE-9	C25-A-314	DM	C25-A-314	OS	OOPJ	C25-A-314	COA	C25-B-003(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-10	---	X	---	X	X	C25-A-304(L)	OS	C25-A-304(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-A-209	COA	DM
+TUE(0)	CSE-10	---	X	C25-A-314	ED|IOC|OB	OOPJ	C25-B-201	DM	C25-B-201	OS	COA	---	X	---	X	---	X	X
+WED(0)	CSE-10	C25-A-318	COA	C25-A-318	DM	DBMS	C25-A-318	OOPJ	C25-B-102(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+THU(0)	CSE-10	C25-A-007	DM	C25-A-102(L)	VT(L)	VT(L)	C25-A-118	DBMS	C25-A-118	OS	ED|IOC|OB	---	X	---	X	---	X	X
+FRI(1)	CSE-10	---	X	C25-B-104(L)	OS(L)	OS(L)	C25-B-319	DBMS	C25-B-319	ED|IOC|OB	X	---	X	C25-A-010	COA	C25-A-010	OOPJ	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-11	C25-B-106	DBMS	C25-B-204(L)	OS(L)	OS(L)	C25-B-316	DM	C25-B-316	OS	COA	---	X	---	X	---	X	X
+TUE(1)	CSE-11	---	X	---	X	X	C25-B-206	COA	C25-B-206	DM	X	---	X	C25-A-301	OOPJ	C25-A-112(L)	DBMS(L)	DBMS(L)
+WED(1)	CSE-11	---	X	C25-B-006	X	OOPJ	C25-B-006	ED|IOC|OB	C25-B-006	COA	X	---	X	C25-A-109	OS	C25-A-104(L)	OOPJ(L)	OOPJ(L)
+THU(0)	CSE-11	---	X	C25-B-009	ED|IOC|OB	DBMS	C25-A-215	OS	C25-A-215	OOPJ	DM	---	X	---	X	---	X	X
+FRI(0)	CSE-11	C25-A-209	ED|IOC|OB	C25-B-018(L)	VT(L)	VT(L)	C25-A-115	COA	C25-A-115	DM	DBMS	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-12	C25-B-108	DM	C25-B-104(L)	OOPJ(L)	OOPJ(L)	C25-B-215	OOPJ	C25-B-215	OS	ED|IOC|OB	---	X	---	X	---	X	X
+TUE(0)	CSE-12	C25-A-315	COA	C25-A-315	DM	ED|IOC|OB	C25-A-315	DBMS	C25-A-312(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+WED(1)	CSE-12	---	X	C25-B-007	OOPJ	COA	C25-B-007	ED|IOC|OB	C25-B-007	DM	X	---	X	C25-A-009	OS	C25-A-009	DBMS	X
+THU(1)	CSE-12	---	X	C25-B-010	X	OOPJ	C25-B-103(L)	OS	C25-B-103(L)	VT(L)	VT(L)	---	X	---	X	C25-A-210	COA	DM
+FRI(0)	CSE-12	---	X	---	X	X	---	X	C25-A-206	COA	DBMS	---	X	---	X	C25-A-212(L)	DBMS(L)	DBMS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-13	---	X	C25-A-318	X	DM	C25-A-318	OOPJ	C25-A-318	ED|IOC|OB	X	---	X	C25-A-210	COA	C25-B-314(L)	OS(L)	OS(L)
+TUE(0)	CSE-13	---	X	C25-A-316	DM	DBMS	C25-A-316	OS	C25-B-003(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+WED(0)	CSE-13	C25-B-008	OS	C25-B-008	OOPJ	ED|IOC|OB	C25-B-308	COA	---	X	X	---	X	C25-B-318(L)	VT(L)	C25-B-318(L)	VT(L)	X
+THU(1)	CSE-13	---	X	C25-B-013	X	DM	C25-B-013	ED|IOC|OB	C25-B-013	COA	X	---	X	C25-A-208	DBMS	C25-A-104(L)	DBMS(L)	DBMS(L)
+FRI(1)	CSE-13	---	X	C25-A-315	X	DM	C25-A-315	OOPJ	C25-A-315	DBMS	X	---	X	C25-A-208	COA	C25-A-208	OS	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-14	---	X	C25-B-006	X	COA	C25-B-006	DBMS	C25-B-006	OOPJ	X	---	X	C25-A-209	OS	C25-A-202(L)	OOPJ(L)	OOPJ(L)
+TUE(1)	CSE-14	---	X	C25-B-018(L)	VT(L)	VT(L)	C25-B-008	DM	C25-B-008	COA	X	---	X	C25-A-207	ED|IOC|OB	C25-A-207	OS	X
+WED(0)	CSE-14	C25-A-307	ED|IOC|OB	C25-B-102(L)	DBMS(L)	DBMS(L)	C25-A-116	OOPJ	C25-A-116	COA	DM	---	X	---	X	---	X	X
+THU(0)	CSE-14	C25-B-019	DBMS	C25-B-003(L)	OS(L)	OS(L)	C25-B-319	OS	C25-B-319	DM	X	---	X	---	X	---	X	X
+FRI(1)	CSE-14	---	X	---	X	X	C25-B-007	OOPJ	C25-B-007	ED|IOC|OB	DBMS	---	X	---	X	C25-A-106	COA	DM
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-15	C25-B-007	DM	C25-B-007	DBMS	OS	C25-B-118(L)	ED|IOC|OB	C25-B-118(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-15	---	X	---	X	X	C25-B-308	DBMS	C25-B-308	DM	X	---	X	C25-A-208	OS	C25-A-208	COA	X
+WED(1)	CSE-15	---	X	C25-B-009	X	COA	C25-B-009	DM	C25-B-009	OOPJ	X	---	X	C25-A-110	OS	C25-A-202(L)	OOPJ(L)	OOPJ(L)
+THU(1)	CSE-15	---	X	C25-B-015	X	COA	C25-B-104(L)	OOPJ	C25-B-104(L)	OS(L)	OS(L)	---	X	---	X	C25-A-211	DBMS	ED|IOC|OB
+FRI(0)	CSE-15	C25-A-316	DM	C25-A-316	ED|IOC|OB	COA	C25-A-316	OOPJ	C25-B-302(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-16	---	X	C25-B-008	X	COA	C25-B-008	OS	C25-B-008	ED|IOC|OB	X	---	X	C25-A-211	DBMS	C25-A-203(L)	OS(L)	OS(L)
+TUE(0)	CSE-16	---	X	C25-A-318	OS	OOPJ	C25-B-209	ED|IOC|OB	C25-B-209	COA	DM	---	X	---	X	---	X	X
+WED(0)	CSE-16	C25-B-010	OOPJ	C25-B-010	COA	DM	C25-B-010	OS	C25-B-203(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+THU(0)	CSE-16	---	X	C25-B-016	X	OOPJ	C25-B-016	DBMS	C25-B-016	DM	X	---	X	C25-B-318(L)	VT(L)	C25-B-318(L)	VT(L)	X
+FRI(1)	CSE-16	---	X	C25-A-318	X	COA	C25-A-318	DM	C25-B-104(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-107	DBMS	ED|IOC|OB
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-17	C25-B-009	OOPJ	C25-B-009	DM	DBMS	C25-B-009	OS	C25-B-003(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-17	---	X	C25-B-006	X	OOPJ	C25-B-006	DM	C25-A-104(L)	VT(L)	VT(L)	---	X	---	X	C25-A-209	ED|IOC|OB	COA
+WED(1)	CSE-17	---	X	C25-B-013	X	OOPJ	C25-B-013	DBMS	C25-B-013	COA	ED|IOC|OB	---	X	---	X	C25-A-203(L)	DBMS(L)	DBMS(L)
+THU(0)	CSE-17	C25-A-201	DBMS	C25-B-004(L)	OS(L)	OS(L)	C25-A-115	COA	C25-A-115	OS	DM	---	X	---	X	---	X	X
+FRI(0)	CSE-17	---	X	C25-B-006	X	OS	C25-B-006	ED|IOC|OB	C25-B-006	COA	DM	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-18	C25-B-110	OOPJ	C25-B-114(L)	DBMS(L)	DBMS(L)	C25-A-015	OS	C25-A-015	ED|IOC|OB	X	---	X	---	X	---	X	X
+TUE(0)	CSE-18	C25-B-007	DBMS	C25-B-007	DM	OS	C25-B-007	COA	C25-B-102(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+WED(1)	CSE-18	---	X	C25-B-015	X	COA	C25-B-015	DBMS	C25-B-104(L)	OS(L)	OS(L)	---	X	---	X	C25-A-010	DM	OOPJ
+THU(1)	CSE-18	---	X	---	X	X	C25-B-018(L)	COA	C25-B-018(L)	VT(L)	VT(L)	---	X	---	X	C25-A-213	ED|IOC|OB	DM
+FRI(0)	CSE-18	C25-B-007	ED|IOC|OB	C25-B-007	OOPJ	OS	C25-A-116	COA	C25-A-116	DBMS	DM	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-19	---	X	C25-A-008	X	OS	C25-A-008	DBMS	C25-B-004(L)	OS(L)	OS(L)	---	X	---	X	C25-A-211	COA	DM
+TUE(0)	CSE-19	---	X	C25-B-008	DM	COA	C25-B-306	OS	C25-B-306	ED|IOC|OB	DBMS	---	X	---	X	---	X	X
+WED(0)	CSE-19	---	X	C25-B-016	DM	ED|IOC|OB	C25-B-016	OOPJ	C25-B-114(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+THU(1)	CSE-19	---	X	C25-B-102(L)	VT(L)	VT(L)	C25-B-008	OOPJ	C25-B-008	DBMS	X	---	X	C25-A-301	COA	C25-A-301	ED|IOC|OB	X
+FRI(1)	CSE-19	C25-A-208	OOPJ	C25-B-114(L)	DBMS(L)	DBMS(L)	C25-B-015	COA	C25-B-015	OS	DM	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-20	---	X	---	X	X	C25-B-213	COA	C25-B-213	ED|IOC|OB	X	---	X	C25-A-213	OOPJ	C25-A-204(L)	DBMS(L)	DBMS(L)
+TUE(1)	CSE-20	---	X	C25-B-009	ED|IOC|OB	OOPJ	C25-B-009	DM	C25-B-009	DBMS	X	---	X	C25-B-318(L)	VT(L)	C25-B-318(L)	VT(L)	X
+WED(0)	CSE-20	---	X	C25-B-017	DBMS	COA	C25-B-017	DM	C25-B-017	OOPJ	OS	---	X	---	X	---	X	X
+THU(0)	CSE-20	C25-B-017	ED|IOC|OB	C25-B-017	COA	DM	C25-B-207	OS	C25-B-114(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+FRI(1)	CSE-20	---	X	C25-B-008	X	OS	C25-B-008	DBMS	C25-B-114(L)	OS(L)	OS(L)	---	X	---	X	C25-A-108	COA	DM
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-21	C25-B-119	DBMS	C25-B-203(L)	OS(L)	OS(L)	C25-B-322	COA	C25-B-322	DM	X	---	X	---	X	---	X	X
+TUE(1)	CSE-21	---	X	C25-B-010	X	DBMS	C25-B-010	ED|IOC|OB	C25-B-103(L)	VT(L)	VT(L)	---	X	---	X	C25-A-210	DM	OS
+WED(1)	CSE-21	---	X	C25-B-020	X	OOPJ	C25-B-020	COA	C25-B-020	ED|IOC|OB	X	---	X	C25-A-111	OS	C25-A-204(L)	OOPJ(L)	OOPJ(L)
+THU(1)	CSE-21	---	X	C25-B-020	X	ED|IOC|OB	C25-B-020	DBMS	C25-B-020	OS	X	---	X	C25-A-306	DM	C25-A-306	OOPJ	COA
+FRI(0)	CSE-21	---	X	C25-B-009	COA	DM	C25-B-009	OOPJ	C25-B-214(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-22	---	X	C25-B-010	X	ED|IOC|OB	C25-B-010	COA	C25-B-102(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-A-213	OOPJ	OS
+TUE(0)	CSE-22	C25-B-013	ED|IOC|OB	C25-B-013	DM	COA	C25-B-013	DBMS	C25-B-104(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+WED(0)	CSE-22	---	X	---	X	X	C25-B-115	OOPJ	C25-B-115	DM	X	---	X	C25-A-113	DBMS	C25-A-212(L)	DBMS(L)	DBMS(L)
+THU(0)	CSE-22	---	X	C25-B-113	DM	COA	C25-B-113	OS	C25-B-113	DBMS	X	---	X	C25-A-202(L)	VT(L)	C25-A-202(L)	VT(L)	X
+FRI(1)	CSE-22	---	X	---	X	X	C25-B-013	COA	C25-B-013	ED|IOC|OB	DM	---	X	---	X	C25-A-109	OOPJ	OS
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-23	---	X	C25-B-013	OS	OOPJ	C25-B-013	DM	C25-B-103(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-23	---	X	C25-B-015	X	COA	C25-B-015	OOPJ	C25-B-114(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-211	OS	DM
+WED(1)	CSE-23	---	X	C25-B-113	X	DM	C25-B-113	DBMS	C25-B-113	COA	X	---	X	C25-A-201	ED|IOC|OB	C25-A-302(L)	OS(L)	OS(L)
+THU(0)	CSE-23	---	X	C25-B-115	ED|IOC|OB	OS	C25-B-308	DBMS	C25-B-308	COA	DM	---	X	---	X	---	X	X
+FRI(0)	CSE-23	---	X	C25-B-010	X	DBMS	C25-B-010	OOPJ	C25-B-010	ED|IOC|OB	COA	---	X	---	X	C25-A-104(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-24	C25-B-015	DM	C25-B-015	OOPJ	COA	C25-B-015	ED|IOC|OB	---	X	X	---	X	---	X	---	X	X
+TUE(0)	CSE-24	C25-A-207	OOPJ	C25-B-114(L)	DBMS(L)	DBMS(L)	C25-B-309	DBMS	C25-B-309	OS	DM	---	X	---	X	---	X	X
+WED(1)	CSE-24	---	X	C25-B-115	X	OS	C25-B-204(L)	DM	C25-B-204(L)	OS(L)	OS(L)	---	X	---	X	C25-A-011	COA	DBMS
+THU(1)	CSE-24	---	X	C25-B-116	X	DBMS	C25-B-116	ED|IOC|OB	C25-B-116	COA	X	---	X	C25-A-209	OS	C25-A-203(L)	OOPJ(L)	OOPJ(L)
+FRI(0)	CSE-24	C25-B-013	OOPJ	C25-B-013	ED|IOC|OB	DM	C25-B-118(L)	COA	C25-B-118(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-25	---	X	---	X	X	C25-A-313	OS	C25-A-313	OOPJ	X	---	X	C25-A-301	COA	C25-A-301	DM	X
+TUE(0)	CSE-25	C25-B-016	COA	C25-B-016	ED|IOC|OB	DM	C25-B-016	OS	C25-B-018(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+WED(0)	CSE-25	C25-B-116	OOPJ	C25-B-116	COA	DBMS	C25-B-118(L)	DM	C25-B-118(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+THU(1)	CSE-25	---	X	C25-B-117	X	OOPJ	C25-B-117	ED|IOC|OB	C25-B-117	DBMS	OS	---	X	---	X	C25-A-204(L)	DBMS(L)	DBMS(L)
+FRI(1)	CSE-25	---	X	C25-B-015	X	COA	C25-B-202(L)	ED|IOC|OB	C25-B-202(L)	OS(L)	OS(L)	---	X	---	X	C25-A-110	DBMS	DM
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-26	---	X	C25-B-016	X	ED|IOC|OB	C25-B-016	DM	C25-B-016	OOPJ	X	---	X	C25-A-306	DBMS	C25-A-212(L)	OOPJ(L)	OOPJ(L)
+TUE(1)	CSE-26	---	X	C25-B-017	X	ED|IOC|OB	C25-B-017	COA	C25-B-017	DBMS	X	---	X	C25-A-203(L)	VT(L)	C25-A-203(L)	VT(L)	X
+WED(0)	CSE-26	C25-A-308	OS	C25-B-104(L)	OS(L)	OS(L)	C25-B-116	DM	C25-B-116	COA	OOPJ	---	X	---	X	---	X	X
+THU(0)	CSE-26	---	X	C25-B-120	DBMS	ED|IOC|OB	C25-B-017	COA	C25-B-017	DM	OS	---	X	---	X	---	X	X
+FRI(1)	CSE-26	---	X	C25-B-016	X	OOPJ	C25-B-203(L)	OS	C25-B-203(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-111	DM	COA
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-27	---	X	C25-B-017	COA	DBMS	C25-B-218(L)	DM	C25-B-218(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-27	---	X	C25-B-020	X	COA	C25-B-203(L)	DBMS	C25-B-203(L)	OS(L)	OS(L)	---	X	---	X	C25-A-213	ED|IOC|OB	DM
+WED(1)	CSE-27	---	X	C25-B-117	X	DBMS	C25-B-117	OOPJ	C25-B-117	ED|IOC|OB	OS	---	X	---	X	C25-A-303(L)	DBMS(L)	DBMS(L)
+THU(1)	CSE-27	---	X	C25-B-122	X	DM	C25-B-118(L)	OS	C25-B-118(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-A-307	COA	OOPJ
+FRI(0)	CSE-27	---	X	C25-B-017	OOPJ	COA	C25-B-016	ED|IOC|OB	C25-B-016	OS	DM	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-28	---	X	---	X	X	C25-B-206	OS	C25-B-206	DM	OOPJ	---	X	---	X	C25-A-306	ED|IOC|OB	COA
+TUE(0)	CSE-28	C25-B-113	DBMS	C25-B-113	COA	DM	C25-B-202(L)	OOPJ	C25-B-202(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+WED(0)	CSE-28	C25-A-309	DBMS	C25-B-114(L)	OS(L)	OS(L)	C25-B-213	COA	C25-B-213	DM	X	---	X	---	X	---	X	X
+THU(0)	CSE-28	---	X	C25-B-213	DM	OOPJ	C25-B-213	OS	C25-B-213	ED|IOC|OB	X	---	X	C25-A-212(L)	VT(L)	C25-A-212(L)	VT(L)	X
+FRI(1)	CSE-28	---	X	C25-B-020	X	COA	C25-B-020	OS	C25-B-020	ED|IOC|OB	X	---	X	C25-A-011	DBMS	C25-A-112(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-29	C25-B-120	DBMS	C25-B-118(L)	VT(L)	VT(L)	C25-A-215	OOPJ	C25-A-215	COA	OS	---	X	---	X	---	X	X
+TUE(1)	CSE-29	---	X	C25-B-115	X	COA	C25-B-115	DM	C25-B-115	ED|IOC|OB	X	---	X	C25-A-306	OOPJ	C25-A-204(L)	DBMS(L)	DBMS(L)
+WED(1)	CSE-29	---	X	C25-B-120	ED|IOC|OB	OOPJ	C25-B-120	OS	C25-B-120	DBMS	X	---	X	C25-A-101	COA	C25-A-101	DM	X
+THU(0)	CSE-29	C25-A-206	DBMS	C25-B-118(L)	OS(L)	OS(L)	C25-B-208	DM	---	X	X	---	X	---	X	---	X	X
+FRI(0)	CSE-29	C25-B-113	DM	C25-B-113	COA	ED|IOC|OB	C25-B-204(L)	OS	C25-B-204(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-30	---	X	C25-B-319	OS	OOPJ	C25-B-119	COA	C25-B-302(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+TUE(0)	CSE-30	C25-B-116	OOPJ	C25-B-116	DM	OS	C25-B-020	COA	C25-B-118(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+WED(1)	CSE-30	---	X	C25-B-122	X	OOPJ	C25-B-122	DBMS	C25-B-122	ED|IOC|OB	X	---	X	C25-A-106	DM	C25-A-106	COA	X
+THU(1)	CSE-30	---	X	C25-B-215	X	DM	C25-B-215	OS	C25-B-215	DBMS	X	---	X	C25-A-210	ED|IOC|OB	C25-A-302(L)	DBMS(L)	DBMS(L)
+FRI(0)	CSE-30	C25-B-115	ED|IOC|OB	C25-B-115	DBMS	COA	C25-B-212(L)	DM	C25-B-212(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-31	---	X	C25-B-020	OS	DM	C25-B-020	OOPJ	C25-B-020	DBMS	X	---	X	C25-A-104(L)	VT(L)	C25-A-104(L)	VT(L)	X
+TUE(0)	CSE-31	C25-B-117	COA	C25-B-117	DBMS	DM	C25-B-204(L)	OOPJ	C25-B-204(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+WED(0)	CSE-31	---	X	C25-B-213	ED|IOC|OB	COA	C25-B-202(L)	DBMS	C25-B-202(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+THU(1)	CSE-31	---	X	C25-B-216	X	COA	C25-B-216	DM	C25-B-216	OOPJ	X	---	X	C25-A-308	ED|IOC|OB	C25-A-308	OS	X
+FRI(1)	CSE-31	---	X	C25-B-116	X	ED|IOC|OB	C25-B-116	COA	C25-B-116	DM	X	---	X	C25-A-101	OS	C25-A-202(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-32	---	X	C25-B-113	X	OS	C25-B-113	DM	C25-B-114(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-307	ED|IOC|OB	OOPJ
+TUE(1)	CSE-32	---	X	C25-B-120	X	DBMS	C25-B-120	DM	C25-B-120	COA	X	---	X	C25-A-212(L)	VT(L)	C25-A-212(L)	VT(L)	X
+WED(0)	CSE-32	C25-B-215	DM	C25-B-215	COA	ED|IOC|OB	C25-B-215	DBMS	C25-B-215	OOPJ	OS	---	X	---	X	---	X	X
+THU(0)	CSE-32	C25-A-208	DBMS	C25-B-104(L)	OS(L)	OS(L)	C25-B-015	COA	C25-B-015	OOPJ	X	---	X	---	X	---	X	X
+FRI(1)	CSE-32	---	X	C25-B-117	X	ED|IOC|OB	C25-B-117	DM	C25-B-117	COA	X	---	X	C25-A-106	OS	C25-A-203(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-33	C25-B-115	DBMS	C25-B-115	DM	ED|IOC|OB	C25-B-208	OOPJ	C25-B-208	OS	COA	---	X	---	X	---	X	X
+TUE(1)	CSE-33	---	X	C25-B-122	X	DM	C25-B-122	ED|IOC|OB	C25-B-122	COA	X	---	X	C25-A-308	DBMS	C25-A-302(L)	OS(L)	OS(L)
+WED(1)	CSE-33	---	X	C25-B-018(L)	VT(L)	VT(L)	C25-B-216	OOPJ	C25-B-216	DBMS	X	---	X	C25-A-107	DM	C25-A-107	COA	X
+THU(1)	CSE-33	---	X	C25-B-114(L)	DBMS(L)	DBMS(L)	C25-A-318	OS	C25-A-318	OOPJ	COA	---	X	---	X	---	X	X
+FRI(0)	CSE-33	---	X	C25-B-120	ED|IOC|OB	DM	C25-B-115	OS	C25-B-304(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-34	---	X	C25-B-116	X	OOPJ	C25-B-116	DM	C25-B-116	COA	X	---	X	C25-A-307	OS	C25-A-303(L)	OOPJ(L)	OOPJ(L)
+TUE(0)	CSE-34	---	X	C25-B-104(L)	DBMS(L)	DBMS(L)	C25-B-116	COA	C25-B-116	ED|IOC|OB	OS	---	X	---	X	---	X	X
+WED(0)	CSE-34	---	X	C25-B-216	DBMS	DM	C25-B-222	COA	C25-B-222	OS	OOPJ	---	X	---	X	---	X	X
+THU(0)	CSE-34	---	X	C25-B-217	OOPJ	DBMS	C25-B-217	ED|IOC|OB	C25-B-217	DM	X	---	X	C25-A-303(L)	VT(L)	C25-A-303(L)	VT(L)	X
+FRI(1)	CSE-34	---	X	C25-B-122	X	DBMS	C25-B-122	ED|IOC|OB	C25-B-122	COA	X	---	X	C25-A-107	DM	C25-A-204(L)	OS(L)	OS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-35	C25-B-117	OS	C25-B-117	COA	OOPJ	C25-B-115	DBMS	C25-B-115	ED|IOC|OB	DM	---	X	---	X	---	X	X
+TUE(1)	CSE-35	---	X	C25-B-213	X	DM	C25-B-212(L)	OS	C25-B-212(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-301	DBMS	ED|IOC|OB
+WED(1)	CSE-35	---	X	C25-B-217	OS	DM	C25-B-217	OOPJ	C25-B-217	COA	X	---	X	C25-A-102(L)	VT(L)	C25-A-102(L)	VT(L)	X
+THU(0)	CSE-35	---	X	C25-B-018(L)	OS(L)	OS(L)	C25-B-120	DM	C25-B-120	ED|IOC|OB	COA	---	X	---	X	---	X	X
+FRI(0)	CSE-35	C25-A-206	DBMS	C25-B-102(L)	OOPJ(L)	OOPJ(L)	C25-B-113	OOPJ	C25-B-113	COA	X	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-36	---	X	C25-B-120	COA	ED|IOC|OB	C25-B-203(L)	OOPJ	C25-B-203(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+TUE(0)	CSE-36	C25-B-215	DBMS	C25-B-215	ED|IOC|OB	OOPJ	C25-B-218(L)	DM	C25-B-218(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+WED(1)	CSE-36	---	X	C25-B-220	X	COA	C25-B-220	OS	C25-B-220	DM	X	---	X	C25-A-108	DBMS	C25-A-108	OOPJ	X
+THU(1)	CSE-36	---	X	C25-B-220	X	COA	C25-B-203(L)	OS	C25-B-203(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-309	DM	DBMS
+FRI(0)	CSE-36	C25-A-211	DM	C25-B-202(L)	OS(L)	OS(L)	C25-B-120	COA	C25-B-120	OS	ED|IOC|OB	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-37	---	X	C25-B-122	X	DM	C25-B-122	ED|IOC|OB	C25-B-122	COA	X	---	X	C25-A-308	OS	C25-A-304(L)	OOPJ(L)	OOPJ(L)
+TUE(0)	CSE-37	C25-B-216	DM	C25-B-216	DBMS	OS	C25-B-214(L)	COA	C25-B-214(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+WED(0)	CSE-37	---	X	C25-B-118(L)	DBMS(L)	DBMS(L)	C25-B-313	OOPJ	C25-B-313	ED|IOC|OB	DBMS	---	X	---	X	---	X	X
+THU(1)	CSE-37	---	X	C25-B-222	X	OOPJ	C25-B-222	DM	C25-B-222	DBMS	ED|IOC|OB	---	X	---	X	C25-A-310	OS	COA
+FRI(1)	CSE-37	---	X	C25-A-006	X	OOPJ	C25-A-006	COA	C25-A-006	DM	X	---	X	C25-B-318(L)	VT(L)	C25-B-318(L)	VT(L)	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-38	---	X	C25-B-213	X	COA	C25-B-007	OS	C25-A-312(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-A-308	ED|IOC|OB	DM
+TUE(1)	CSE-38	---	X	C25-B-217	X	COA	C25-B-302(L)	OOPJ	C25-B-302(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-306	DM	ED|IOC|OB
+WED(0)	CSE-38	C25-B-222	OOPJ	C25-B-222	OS	ED|IOC|OB	C25-B-315	DM	C25-B-315	DBMS	X	---	X	---	X	---	X	X
+THU(0)	CSE-38	C25-A-209	COA	C25-B-103(L)	VT(L)	VT(L)	C25-B-009	DBMS	C25-B-009	OS	OOPJ	---	X	---	X	---	X	X
+FRI(1)	CSE-38	---	X	---	X	X	C25-A-016	DM	C25-A-016	DBMS	X	---	X	C25-A-108	COA	C25-A-302(L)	OS(L)	OS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-39	---	X	C25-B-215	COA	ED|IOC|OB	C25-B-202(L)	OS	C25-B-202(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-39	---	X	C25-B-220	X	COA	C25-B-220	DBMS	C25-B-220	OOPJ	X	---	X	C25-A-307	ED|IOC|OB	C25-A-307	DM	X
+WED(1)	CSE-39	---	X	C25-B-316	X	OOPJ	C25-B-316	OS	C25-B-316	DBMS	DM	---	X	---	X	C25-A-312(L)	DBMS(L)	DBMS(L)
+THU(1)	CSE-39	---	X	C25-B-313	X	DM	C25-B-204(L)	ED|IOC|OB	C25-B-204(L)	OS(L)	OS(L)	---	X	---	X	C25-A-311	COA	OOPJ
+FRI(0)	CSE-39	C25-B-213	DM	C25-B-213	DBMS	COA	C25-B-018(L)	OS	C25-B-018(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-40	---	X	C25-B-216	OOPJ	OS	C25-B-216	DM	---	X	X	---	X	C25-A-309	DBMS	C25-A-309	COA	X
+TUE(0)	CSE-40	---	X	C25-B-222	ED|IOC|OB	COA	C25-B-222	DM	C25-B-303(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+WED(0)	CSE-40	C25-B-315	OOPJ	C25-B-315	ED|IOC|OB	DBMS	C25-B-103(L)	DM	C25-B-103(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+THU(0)	CSE-40	---	X	C25-B-202(L)	OOPJ(L)	OOPJ(L)	C25-B-010	COA	C25-B-010	OS	ED|IOC|OB	---	X	---	X	---	X	X
+FRI(1)	CSE-40	---	X	C25-B-215	OS	OOPJ	C25-B-215	DM	C25-B-215	DBMS	X	---	X	C25-A-109	COA	C25-A-303(L)	DBMS(L)	DBMS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-41	C25-B-208	ED|IOC|OB	C25-B-018(L)	VT(L)	VT(L)	C25-B-117	COA	C25-B-117	DM	OOPJ	---	X	---	X	---	X	X
+TUE(1)	CSE-41	---	X	C25-B-313	X	DM	C25-B-113	OS	C25-B-113	DBMS	X	---	X	C25-A-310	OOPJ	C25-A-303(L)	DBMS(L)	DBMS(L)
+WED(1)	CSE-41	---	X	C25-B-317	X	ED|IOC|OB	C25-B-317	COA	C25-B-317	OS	X	---	X	C25-A-206	DBMS	C25-B-003(L)	OS(L)	OS(L)
+THU(0)	CSE-41	---	X	C25-B-315	X	DM	C25-B-212(L)	COA	C25-B-212(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+FRI(0)	CSE-41	C25-B-216	OS	C25-B-216	DM	COA	C25-B-213	DBMS	C25-B-213	ED|IOC|OB	OOPJ	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-42	---	X	C25-B-217	ED|IOC|OB	OOPJ	C25-B-217	DBMS	C25-B-217	COA	X	---	X	---	X	---	X	X
+TUE(0)	CSE-42	C25-A-301	DBMS	C25-B-214(L)	OS(L)	OS(L)	C25-A-014	COA	C25-A-014	OOPJ	DM	---	X	---	X	---	X	X
+WED(1)	CSE-42	---	X	C25-B-313	X	OS	C25-B-018(L)	ED|IOC|OB	C25-B-018(L)	VT(L)	VT(L)	---	X	---	X	C25-A-109	COA	DM
+THU(1)	CSE-42	---	X	C25-B-316	X	DBMS	C25-B-316	DM	C25-B-316	ED|IOC|OB	X	---	X	C25-A-211	OS	C25-A-304(L)	OOPJ(L)	OOPJ(L)
+FRI(0)	CSE-42	C25-B-217	DM	C25-B-217	OS	OOPJ	C25-A-304(L)	COA	C25-A-304(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-43	---	X	C25-B-220	X	COA	C25-B-220	ED|IOC|OB	C25-B-220	OOPJ	X	---	X	C25-A-310	DM	C25-A-310	DBMS	X
+TUE(0)	CSE-43	C25-A-209	OS	C25-B-202(L)	OOPJ(L)	OOPJ(L)	C25-B-213	DBMS	C25-B-213	OOPJ	DM	---	X	---	X	---	X	X
+WED(0)	CSE-43	C25-B-320	ED|IOC|OB	C25-B-320	DM	OS	C25-B-320	COA	---	X	X	---	X	C25-A-103(L)	VT(L)	C25-A-103(L)	VT(L)	X
+THU(1)	CSE-43	---	X	C25-B-317	X	DM	C25-B-214(L)	OOPJ	C25-B-214(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-313	ED|IOC|OB	COA
+FRI(1)	CSE-43	---	X	---	X	X	C25-B-216	OS	C25-B-216	COA	X	---	X	C25-A-110	DBMS	C25-A-304(L)	OS(L)	OS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-44	---	X	C25-B-222	X	DM	C25-B-120	OOPJ	C25-B-018(L)	VT(L)	VT(L)	---	X	---	X	C25-A-311	DBMS	ED|IOC|OB
+TUE(1)	CSE-44	---	X	C25-B-315	X	COA	C25-B-315	ED|IOC|OB	C25-B-315	OS	X	---	X	C25-A-311	DBMS	C25-A-304(L)	OS(L)	OS(L)
+WED(0)	CSE-44	---	X	C25-B-322	ED|IOC|OB	OOPJ	C25-B-322	COA	C25-B-322	DM	OS	---	X	---	X	---	X	X
+THU(0)	CSE-44	C25-A-210	OS	C25-B-203(L)	OOPJ(L)	OOPJ(L)	C25-B-006	DM	C25-B-006	COA	X	---	X	---	X	---	X	X
+FRI(1)	CSE-44	---	X	C25-B-220	DM	DBMS	C25-B-220	OOPJ	---	X	X	---	X	C25-A-111	COA	C25-A-312(L)	DBMS(L)	DBMS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-45	C25-B-313	COA	C25-B-313	OOPJ	DM	C25-B-204(L)	DBMS	C25-B-204(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-45	---	X	C25-B-316	COA	OOPJ	C25-B-216	DBMS	C25-B-216	OS	ED|IOC|OB	---	X	---	X	---	X	X
+WED(1)	CSE-45	---	X	C25-A-006	X	DBMS	C25-A-006	DM	C25-A-006	OOPJ	X	---	X	C25-A-207	OS	C25-B-102(L)	OOPJ(L)	OOPJ(L)
+THU(1)	CSE-45	---	X	---	X	X	C25-B-220	ED|IOC|OB	C25-B-220	DM	X	---	X	C25-A-213	COA	C25-A-312(L)	DBMS(L)	DBMS(L)
+FRI(0)	CSE-45	---	X	C25-B-222	OS	ED|IOC|OB	C25-B-222	DM	C25-B-222	COA	X	---	X	C25-B-003(L)	VT(L)	C25-B-003(L)	VT(L)	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-46	---	X	C25-B-315	X	ED|IOC|OB	C25-B-315	OOPJ	C25-B-315	OS	X	---	X	C25-A-313	COA	C25-A-313	DM	X
+TUE(0)	CSE-46	C25-A-210	DBMS	C25-B-203(L)	OS(L)	OS(L)	C25-B-217	OOPJ	C25-B-217	DM	X	---	X	---	X	---	X	X
+WED(0)	CSE-46	C25-B-110	ED|IOC|OB	C25-A-111	DM	OOPJ	C25-B-218(L)	COA	C25-B-218(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+THU(0)	CSE-46	---	X	C25-B-320	X	OS	C25-B-218(L)	COA	C25-B-218(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-B-019	DM	DBMS
+FRI(1)	CSE-46	---	X	C25-B-313	DBMS	OS	C25-B-313	ED|IOC|OB	---	X	X	---	X	C25-A-113	COA	C25-B-004(L)	DBMS(L)	DBMS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-47	---	X	C25-B-316	X	DM	C25-B-212(L)	OOPJ	C25-B-212(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-47	---	X	C25-B-317	DM	ED|IOC|OB	C25-B-117	OOPJ	C25-B-117	OS	X	---	X	C25-A-309	DBMS	C25-A-309	COA	X
+WED(1)	CSE-47	---	X	C25-A-007	X	OOPJ	C25-A-007	COA	C25-A-007	ED|IOC|OB	X	---	X	C25-A-208	OS	C25-B-103(L)	OOPJ(L)	OOPJ(L)
+THU(0)	CSE-47	C25-A-211	DBMS	C25-B-204(L)	OS(L)	OS(L)	C25-B-122	COA	C25-B-122	OS	DM	---	X	---	X	---	X	X
+FRI(0)	CSE-47	---	X	C25-B-315	COA	DM	C25-B-315	ED|IOC|OB	C25-B-315	DBMS	X	---	X	C25-B-102(L)	VT(L)	C25-B-102(L)	VT(L)	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-48	---	X	C25-B-317	OS	DBMS	C25-B-317	COA	C25-B-317	OOPJ	DM	---	X	---	X	---	X	X
+TUE(0)	CSE-48	C25-A-211	DBMS	C25-B-204(L)	OS(L)	OS(L)	C25-A-114	DM	C25-A-114	COA	OOPJ	---	X	---	X	---	X	X
+WED(1)	CSE-48	---	X	C25-A-008	X	DM	C25-B-214(L)	OS	C25-B-214(L)	DBMS(L)	DBMS(L)	---	X	---	X	C25-A-110	DBMS	ED|IOC|OB
+THU(1)	CSE-48	---	X	C25-B-322	X	OS	C25-B-322	COA	C25-B-322	ED|IOC|OB	X	---	X	C25-A-307	DM	C25-B-003(L)	OOPJ(L)	OOPJ(L)
+FRI(0)	CSE-48	---	X	C25-B-316	ED|IOC|OB	COA	C25-B-103(L)	OOPJ	C25-B-103(L)	VT(L)	VT(L)	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-49	---	X	C25-B-103(L)	VT(L)	VT(L)	C25-B-101	COA	C25-B-101	ED|IOC|OB	OOPJ	---	X	---	X	---	X	X
+TUE(0)	CSE-49	---	X	C25-B-320	X	DM	C25-B-320	DBMS	C25-B-320	OS	X	---	X	C25-A-313	ED|IOC|OB	C25-A-312(L)	DBMS(L)	DBMS(L)
+WED(0)	CSE-49	---	X	C25-A-201	DM	COA	C25-B-212(L)	DBMS	C25-B-212(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+THU(1)	CSE-49	---	X	C25-A-006	X	ED|IOC|OB	C25-A-006	OS	C25-A-006	DBMS	X	---	X	C25-B-101	DM	C25-B-101	OOPJ	COA
+FRI(1)	CSE-49	---	X	C25-B-317	OOPJ	DM	C25-B-317	OS	---	X	X	---	X	C25-A-201	COA	C25-B-103(L)	OOPJ(L)	OOPJ(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-50	---	X	C25-B-320	X	DM	C25-B-320	COA	C25-B-320	ED|IOC|OB	X	---	X	C25-A-102(L)	VT(L)	C25-A-102(L)	VT(L)	X
+TUE(1)	CSE-50	---	X	C25-B-322	X	OOPJ	C25-B-322	DBMS	C25-B-322	OS	X	---	X	C25-B-019	DM	C25-B-003(L)	DBMS(L)	DBMS(L)
+WED(0)	CSE-50	---	X	C25-A-206	COA	DBMS	C25-B-209	OS	C25-B-209	OOPJ	DM	---	X	---	X	---	X	X
+THU(0)	CSE-50	C25-A-213	DBMS	C25-B-212(L)	OOPJ(L)	OOPJ(L)	C25-B-115	OOPJ	C25-B-115	COA	ED|IOC|OB	---	X	---	X	---	X	X
+FRI(1)	CSE-50	---	X	C25-B-320	X	COA	C25-B-303(L)	OS	C25-B-303(L)	OS(L)	OS(L)	---	X	---	X	C25-A-113	ED|IOC|OB	DM
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-51	---	X	C25-B-322	X	DM	C25-B-214(L)	DBMS	C25-B-214(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-51	---	X	C25-A-006	X	OOPJ	C25-A-006	DM	C25-A-006	ED|IOC|OB	X	---	X	C25-B-101	COA	C25-B-004(L)	DBMS(L)	DBMS(L)
+WED(1)	CSE-51	---	X	C25-A-210	DBMS	OOPJ	C25-A-210	OS	C25-A-210	COA	X	---	X	C25-B-104(L)	VT(L)	C25-B-104(L)	VT(L)	X
+THU(1)	CSE-51	---	X	C25-A-007	X	COA	C25-A-007	DM	C25-A-007	OS	X	---	X	C25-A-309	ED|IOC|OB	C25-B-004(L)	OS(L)	OS(L)
+FRI(0)	CSE-51	C25-B-322	OOPJ	C25-B-322	OS	DM	C25-B-217	DBMS	C25-B-217	COA	ED|IOC|OB	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(1)	CSE-52	---	X	C25-A-006	X	OOPJ	C25-A-006	COA	C25-A-006	ED|IOC|OB	X	---	X	C25-B-019	DM	C25-B-003(L)	OOPJ(L)	OOPJ(L)
+TUE(0)	CSE-52	C25-A-213	DBMS	C25-B-212(L)	OS(L)	OS(L)	C25-B-317	ED|IOC|OB	C25-B-317	OOPJ	COA	---	X	---	X	---	X	X
+WED(0)	CSE-52	C25-A-311	DM	C25-B-202(L)	VT(L)	VT(L)	C25-B-219	OS	C25-B-219	ED|IOC|OB	X	---	X	---	X	---	X	X
+THU(0)	CSE-52	---	X	C25-B-209	COA	DBMS	C25-B-320	DM	C25-B-320	OS	OOPJ	---	X	---	X	---	X	X
+FRI(1)	CSE-52	---	X	C25-A-206	DBMS	DM	C25-A-206	COA	---	X	X	---	X	C25-A-206	OS	C25-B-104(L)	DBMS(L)	DBMS(L)
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-53	---	X	C25-A-007	DBMS	COA	C25-B-017	OS	C25-B-104(L)	OS(L)	OS(L)	---	X	---	X	---	X	X
+TUE(1)	CSE-53	---	X	C25-A-308	ED|IOC|OB	DM	C25-A-308	DBMS	C25-A-308	COA	X	---	X	C25-B-102(L)	VT(L)	C25-B-102(L)	VT(L)	X
+WED(1)	CSE-53	---	X	C25-B-306	X	DBMS	C25-B-306	DM	C25-B-306	OOPJ	OS	---	X	---	X	C25-B-114(L)	OOPJ(L)	OOPJ(L)
+THU(0)	CSE-53	C25-A-301	OOPJ	C25-B-214(L)	DBMS(L)	DBMS(L)	C25-B-313	COA	C25-B-313	DM	ED|IOC|OB	---	X	---	X	---	X	X
+FRI(0)	CSE-53	---	X	C25-B-219	ED|IOC|OB	DM	C25-B-320	OOPJ	C25-B-320	COA	OS	---	X	---	X	---	X	X
+DAY	Section	ROOM1	8-9	ROOM2	9-10	10-11	ROOM3	11-12	ROOM4	12-1	1-2	ROOM5	2-3	ROOM6	3.00-4.00	ROOM7	4.00-5.00	5.00-6.00
+MON(0)	CSE-54	C25-B-210	ED|IOC|OB	C25-B-212(L)	DBMS(L)	DBMS(L)	C25-B-222	DM	C25-B-222	COA	DBMS	---	X	---	X	---	X	X
+TUE(0)	CSE-54	---	X	C25-A-313	COA	DBMS	C25-A-313	OOPJ	C25-A-313	OS	DM	---	X	---	X	---	X	X
+WED(1)	CSE-54	---	X	C25-A-010	X	COA	C25-A-010	ED|IOC|OB	C25-B-302(L)	OOPJ(L)	OOPJ(L)	---	X	---	X	C25-A-111	DM	OS
+THU(1)	CSE-54	---	X	C25-A-008	X	OOPJ	C25-A-008	OS	C25-A-008	DBMS	COA	---	X	---	X	C25-B-102(L)	OS(L)	OS(L)
+FRI(0)	CSE-54	C25-A-207	DM	C25-B-103(L)	VT(L)	VT(L)	C25-B-316	OOPJ	C25-B-316	ED|IOC|OB	X	---	X	---	X	---	X	X
+`;
+
+    // --------- PARSER: builds timetableData[section][day] from rawTimetableText ---------
+
+    const dayMap = {
+      MON: "monday",
+      TUE: "tuesday",
+      WED: "wednesday",
+      THU: "thursday",
+      FRI: "friday"
+    };
+
+    function normalizeSubject(raw) {
+      if (!raw || raw === "X" || raw === "---") return "";
+      if (raw === "ED|IOC|OB") return "EDI / OC / OB";
+      if (raw.endsWith("(L)")) {
+        return raw.slice(0, -3) + " (Lab)";
+      }
+      return raw;
+    }
+
+    function roomForSlot(roomToken, subj) {
+      if (!subj) return "";
+      if (roomToken === "---" || roomToken === "X") return "";
+      return roomToken;
+    }
+
+    const timetableData = {};
+
+    rawTimetableText.split("\n").forEach(line => {
+      const trimmed = line.trim();
+      if (!trimmed) return;
+      if (trimmed.startsWith("DAY")) return;
+
+      const parts = trimmed.split(/\s+/);
+      if (parts.length < 19) return; // safety
+
+      const dayToken = parts[0];   // e.g., MON(1)
+      const section = parts[1];    // e.g., CSE-1
+      const dayKey = dayMap[dayToken.slice(0, 3).toUpperCase()];
+      if (!dayKey) return;
+
+      const room1 = parts[2];
+      const s8_9 = parts[3];
+
+      const room2 = parts[4];
+      const s9_10 = parts[5];
+      const s10_11 = parts[6];
+
+      const room3 = parts[7];
+      const s11_12 = parts[8];
+
+      const room4 = parts[9];
+      const s12_1 = parts[10];
+      const s1_2 = parts[11];
+
+      const room5 = parts[12];
+      const s2_3 = parts[13];
+
+      const room6 = parts[14];
+      const s3_4 = parts[15];
+
+      const room7 = parts[16];
+      const s4_5 = parts[17];
+      const s5_6 = parts[18];
+
+      const n8_9 = normalizeSubject(s8_9);
+      const n9_10 = normalizeSubject(s9_10);
+      const n10_11 = normalizeSubject(s10_11);
+      const n11_12 = normalizeSubject(s11_12);
+      const n12_1 = normalizeSubject(s12_1);
+      const n1_2 = normalizeSubject(s1_2);
+      const n2_3 = normalizeSubject(s2_3);
+      const n3_4 = normalizeSubject(s3_4);
+      const n4_5 = normalizeSubject(s4_5);
+      const n5_6 = normalizeSubject(s5_6);
+
+      const slots = [];
+
+      function addSlot(label, subj, roomToken) {
+        if (!subj) return;
+        slots.push({
+          time: label,
+          subject: subj,
+          room: roomForSlot(roomToken, subj)
+        });
+      }
+
+      addSlot("08:00 – 09:00", n8_9, room1);
+      addSlot("09:00 – 10:00", n9_10, room2);
+      addSlot("10:00 – 11:00", n10_11, room2);
+      addSlot("11:00 – 12:00", n11_12, room3);
+      addSlot("12:00 – 01:00", n12_1, room4);
+      addSlot("01:00 – 02:00", n1_2, room4);
+      addSlot("02:00 – 03:00", n2_3, room5);
+      addSlot("03:00 – 04:00", n3_4, room6);
+      addSlot("04:00 – 05:00", n4_5, room7);
+      addSlot("05:00 – 06:00", n5_6, room7);
+
+      if (!timetableData[section]) timetableData[section] = {};
+      timetableData[section][dayKey] = slots;
+    });
+
+    // ------- UI binding -------
+
+    const sectionSelect = document.getElementById("sectionSelect");
+    const daySelect = document.getElementById("daySelect");
+    const showButton = document.getElementById("showButton");
+    const timetableBody = document.getElementById("timetableBody");
+
+    // Fill section dropdown from parsed data
+    const sections = Object.keys(timetableData).sort((a, b) => {
+      const na = parseInt(a.split("-")[1], 10);
+      const nb = parseInt(b.split("-")[1], 10);
+      if (isNaN(na) || isNaN(nb)) return a.localeCompare(b);
+      return na - nb;
+    });
+
+    sections.forEach(sec => {
+      const opt = document.createElement("option");
+      opt.value = sec;
+      opt.textContent = sec;
+      sectionSelect.appendChild(opt);
+    });
+
+    function renderTimetable() {
+      const section = sectionSelect.value;
+      const day = daySelect.value;
+
+      timetableBody.innerHTML = "";
+
+      if (!section || !day) return;
+
+      const sectionData = timetableData[section] || {};
+      const slots = sectionData[day] || [];
+
+      if (!slots.length) {
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+        cell.colSpan = 3;
+        cell.className = "text-center text-muted py-4";
+        cell.textContent = "No classes found for this section & day.";
+        row.appendChild(cell);
+        timetableBody.appendChild(row);
+        return;
+      }
+
+      slots.forEach(slot => {
+        const tr = document.createElement("tr");
+
+        const tdTime = document.createElement("td");
+        tdTime.textContent = slot.time;
+        tr.appendChild(tdTime);
+
+        const tdSubject = document.createElement("td");
+        tdSubject.textContent = slot.subject;
+        tr.appendChild(tdSubject);
+
+        const tdRoom = document.createElement("td");
+        tdRoom.textContent = slot.room || "-";
+        tr.appendChild(tdRoom);
+
+        timetableBody.appendChild(tr);
+      });
+    }
+
+    showButton.addEventListener("click", renderTimetable);
+    sectionSelect.addEventListener("change", renderTimetable);
+    daySelect.addEventListener("change", renderTimetable);
+
+    // Initial selection: first section + Monday
+    if (sections.length) {
+      sectionSelect.value = sections[0];
+    }
+    daySelect.value = "monday";
+    renderTimetable();
+  </script>
+
+</body>
+
+</html>
