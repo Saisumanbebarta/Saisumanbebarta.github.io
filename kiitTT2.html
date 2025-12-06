@@ -2,241 +2,245 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>KIIT TIME TABLE</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>KIIT TIME TABLE</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-  <link rel="icon" type="image/png" href="images/Sai.png">
-  <link rel="apple-touch-icon" href="images/Sai.png">
+    <link rel="icon" type="image/png" href="images/Sai.png">
+    <link rel="apple-touch-icon" href="images/Sai.png">
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-  .install-card {
-    background: rgb(20, 31, 38);  
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    backdrop-filter: blur(6px);
-  }
+    <style>
+        .install-card {
+            background: rgb(20, 31, 38);
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(6px);
+        }
 
-    #install-app * {
-    color: rgb(19, 135, 193) !important;
-  }
-</style>
+        #install-app * {
+            color: rgb(19, 135, 193) !important;
+        }
+    </style>
 </head>
 
 <body class="starter-page-page">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
+    <header id="header" class="header d-flex align-items-center light-background sticky-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="ACHIEVEMENTS.html">Achievements</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="kiitTT2.html" class="active">KIIT TIME TABLE</a></li>
-          <li><a href="#install-app">Install App</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ACHIEVEMENTS.html">Achievements</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="kiitTT2.html" class="active">KIIT TIME TABLE</a></li>
+                    <li><a href="#install-app">Install App</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
 
-      <div class="header-social-links">
-        <a href="https://github.com/Saisumanbebarta" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://www.facebook.com/saisuman.bebarta.3" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/saisumanbebarta/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/" class="linkedin"><i
-            class="bi bi-linkedin"></i></a>
-      </div>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Timetable Section -->
-    <section id="timetable-section" class="starter-section section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Class Timetable</h2>
-        <p>Select your <strong>Section</strong>. The <strong>current day</strong> is selected automatically.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-
-            <div class="card border-0 shadow-sm">
-              <div class="card-body">
-
-                <!-- Controls -->
-                <form class="row gy-3 align-items-end mb-3">
-                  <div class="col-md-6">
-                    <label for="sectionSelect"
-                      class="form-label small text-uppercase fw-semibold text-secondary">Section</label>
-                    <select id="sectionSelect" class="form-select">
-                      <!-- Filled by JS from timetable data -->
-                    </select>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="daySelect" class="form-label small text-uppercase fw-semibold text-secondary">Day</label>
-                    <select id="daySelect" class="form-select">
-                      <option value="monday">Monday</option>
-                      <option value="tuesday">Tuesday</option>
-                      <option value="wednesday">Wednesday</option>
-                      <option value="thursday">Thursday</option>
-                      <option value="friday">Friday</option>
-                    </select>
-                  </div>
-                </form>
-
-                <!-- Timetable Table -->
-                <div class="table-responsive">
-                  <table class="table table-sm align-middle mb-0">
-                    <thead class="table-light">
-                      <tr>
-                        <th scope="col">Time</th>
-                        <th scope="col">Subject</th>
-                        <th scope="col">Room</th>
-                      </tr>
-                    </thead>
-                    <tbody id="timetableBody">
-                      <!-- Rows will be injected by JavaScript -->
-                    </tbody>
-                  </table>
-                </div>
-
-              </div>
+            <div class="header-social-links">
+                <a href="https://github.com/Saisumanbebarta" class="github"><i class="bi bi-github"></i></a>
+                <a href="https://www.facebook.com/saisuman.bebarta.3" class="facebook"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/saisumanbebarta/" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/" class="linkedin"><i
+                        class="bi bi-linkedin"></i></a>
             </div>
 
-          </div>
         </div>
-      </div>
+    </header>
 
-      <!-- Install / Add to Home Screen Instructions (collapsible) -->
-      <div class="container mt-4" id="install-app" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="card border-0 install-card">
+    <main class="main">
 
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
-                  <h3 class="h5 mb-0">
-                    <i class="bi bi-phone"></i> How to Add this Timetable to your Home Screen
-                  </h3>
-                  <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#installInstructions" aria-expanded="false" aria-controls="installInstructions">
-                    Show / Hide
-                  </button>
-                </div>
 
-                <div class="collapse mt-3" id="installInstructions">
-                  <p class="text-muted small mb-3">
-                    Follow the steps below to save this page as a shortcut / app on your phone,
-                    so you can open your timetable quickly.
-                  </p>
+        <section id="timetable-section" class="starter-section section">
 
-                  <div class="mb-3">
-                    <h5 class="h6">📱 Android</h5>
-                    <ol class="small mb-2">
-                      <li>Open this page in <strong>Google Chrome</strong>.</li>
-                      <li>Tap the <strong>⋮</strong> three-dots menu in the top-right corner.</li>
-                      <li>Tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
-                      <li>Edit the name if you want (e.g. <strong>KIIT Timetable</strong>).</li>
-                      <li>Tap <strong>Add</strong> / <strong>Install</strong>.</li>
-                    </ol>
-                    <p class="small text-muted mb-0">
-                      You’ll now see an app icon on your home screen. Tapping it opens this timetable directly.
-                    </p>
-                  </div>
 
-                  <hr>
-
-                  <div class="mb-3">
-                    <h5 class="h6">🍎 IOS(Safari)</h5>
-                    <ol class="small mb-2">
-                      <li>Open this page in <strong>Safari</strong>.</li>
-                      <li>Tap the <strong>Share</strong> icon (square with an arrow pointing up).</li>
-                      <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
-                      <li>Edit the name if you want.</li>
-                      <li>Tap <strong>Add</strong>.</li>
-                    </ol>
-                    <p class="small text-muted mb-0">
-                      An icon will appear on your home screen that opens this timetable directly.
-                    </p>
-                  </div>
-
-                  <hr>
-                </div>
-
-              </div>
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Class Timetable</h2>
+                <p>Select your <strong>Section</strong>. The <strong>current day</strong> is selected automatically.</p>
             </div>
-          </div>
+
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+
+
+                                <form class="row gy-3 align-items-end mb-3">
+                                    <div class="col-md-6">
+                                        <label for="sectionSelect"
+                                            class="form-label small text-uppercase fw-semibold text-secondary">Section</label>
+                                        <select id="sectionSelect" class="form-select">
+
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="daySelect"
+                                            class="form-label small text-uppercase fw-semibold text-secondary">Day</label>
+                                        <select id="daySelect" class="form-select">
+                                            <option value="monday">Monday</option>
+                                            <option value="tuesday">Tuesday</option>
+                                            <option value="wednesday">Wednesday</option>
+                                            <option value="thursday">Thursday</option>
+                                            <option value="friday">Friday</option>
+                                        </select>
+                                    </div>
+                                </form>
+
+
+                                <div class="table-responsive">
+                                    <table class="table table-sm align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col">Time</th>
+                                                <th scope="col">Subject</th>
+                                                <th scope="col">Room</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="timetableBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container mt-4" id="install-app" data-aos="fade-up">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card border-0 install-card">
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h3 class="h5 mb-0">
+                                        <i class="bi bi-phone"></i> How to Add this Timetable to your Home Screen
+                                    </h3>
+                                    <button class="btn btn-sm btn-outline-primary" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#installInstructions"
+                                        aria-expanded="false" aria-controls="installInstructions">
+                                        Show / Hide
+                                    </button>
+                                </div>
+
+                                <div class="collapse mt-3" id="installInstructions">
+                                    <p class="text-muted small mb-3">
+                                        Follow the steps below to save this page as a shortcut / app on your phone,
+                                        so you can open your timetable quickly.
+                                    </p>
+
+                                    <div class="mb-3">
+                                        <h5 class="h6">📱 Android</h5>
+                                        <ol class="small mb-2">
+                                            <li>Open this page in <strong>Google Chrome</strong>.</li>
+                                            <li>Tap the <strong>⋮</strong> three-dots menu in the top-right corner.</li>
+                                            <li>Tap <strong>Add to Home screen</strong> or <strong>Install app</strong>.
+                                            </li>
+                                            <li>Edit the name if you want (e.g. <strong>KIIT Timetable</strong>).</li>
+                                            <li>Tap <strong>Add</strong> / <strong>Install</strong>.</li>
+                                        </ol>
+                                        <p class="small text-muted mb-0">
+                                            You’ll now see an app icon on your home screen. Tapping it opens this
+                                            timetable directly.
+                                        </p>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="mb-3">
+                                        <h5 class="h6">🍎 IOS(Safari)</h5>
+                                        <ol class="small mb-2">
+                                            <li>Open this page in <strong>Safari</strong>.</li>
+                                            <li>Tap the <strong>Share</strong> icon (square with an arrow pointing up).
+                                            </li>
+                                            <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+                                            <li>Edit the name if you want.</li>
+                                            <li>Tap <strong>Add</strong>.</li>
+                                        </ol>
+                                        <p class="small text-muted mb-0">
+                                            An icon will appear on your home screen that opens this timetable directly.
+                                        </p>
+                                    </div>
+
+                                    <hr>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <p style="text-align: center;">Developed By:
+            <a href="https://saisumanbebarta.in/index.html">SAI SUMAN BEBARTA</a>
+        </p>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="social-links d-flex justify-content-center">
+                <a href="https://github.com/Saisumanbebarta"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.facebook.com/saisuman.bebarta.3"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/saisumanbebarta/"><i class="bi bi-instagram"></i></a>
+            </div>
         </div>
-      </div>
+    </footer>
 
-    </section>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-    <p style="text-align: center;">Developed By:
-      <a href="https://saisumanbebarta.in/index.html">SAI SUMAN BEBARTA</a>
-    </p>
-  </main>
+    <div id="preloader"></div>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/Saisumanbebarta"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/sai-suman-bebarta-542950219/"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.facebook.com/saisuman.bebarta.3"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/saisumanbebarta/"><i class="bi bi-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <script src="assets/js/main.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <script>
 
-  <!-- Timetable + Install-App JS -->
-  <script>
-    // Raw timetable text (updated)
-    const rawTimetableText = `
+        const rawTimetableText = `
 MON(1)	CSE-1	---	X	C25-A-118	OS	DBMS	C25-A-118	DM	C25-A-118	OOPJ	X	---	X	C25-A-103(L)	VT(L)	C25-A-103(L)	VT(L)	X
 TUE(0)	CSE-1	C25-A-214	DM	C25-A-214	COA	ED|IOC|OB	C25-A-214	OOPJ	C25-A-304(L)	DBMS(L)	DBMS(L)	---	X	---	X	---	X	X
 WED(0)	CSE-1	C25-A-301	DBMS	C25-A-304(L)	OS(L)	OS(L)	C25-A-218	COA	C25-A-218	ED|IOC|OB	X	---	X	---	X	---	X	X
@@ -562,203 +566,203 @@ THU(1)	CSE-54	---	X	C25-A-008	X	OOPJ	C25-A-008	OS	C25-A-008	DBMS	COA	---	X	---	X
 FRI(0)	CSE-54	C25-A-207	DM	C25-B-103(L)	VT(L)	VT(L)	C25-B-316	OOPJ	C25-B-316	ED|IOC|OB	X	---	X	---	X	---	X	X
 `;
 
-    const dayMap = {
-      MON: "monday",
-      TUE: "tuesday",
-      WED: "wednesday",
-      THU: "thursday",
-      FRI: "friday"
-    };
+        const dayMap = {
+            MON: "monday",
+            TUE: "tuesday",
+            WED: "wednesday",
+            THU: "thursday",
+            FRI: "friday"
+        };
 
-    function normalizeSubject(raw) {
-      if (!raw || raw === "X" || raw === "---") return "";
-      if (raw === "ED|IOC|OB") return "EDI / OC / OB";
-      if (raw.endsWith("(L)")) {
-        return raw.slice(0, -3) + " (Lab)";
-      }
-      return raw;
-    }
+        function normalizeSubject(raw) {
+            if (!raw || raw === "X" || raw === "---") return "";
+            if (raw === "ED|IOC|OB") return "EDI / OC / OB";
+            if (raw.endsWith("(L)")) {
+                return raw.slice(0, -3) + " (Lab)";
+            }
+            return raw;
+        }
 
-    function roomForSlot(roomToken, subj) {
-      if (!subj) return "";
-      if (roomToken === "---" || roomToken === "X") return "";
-      return roomToken;
-    }
+        function roomForSlot(roomToken, subj) {
+            if (!subj) return "";
+            if (roomToken === "---" || roomToken === "X") return "";
+            return roomToken;
+        }
 
-    const timetableData = {};
+        const timetableData = {};
 
-    rawTimetableText.split("\n").forEach(line => {
-      const trimmed = line.trim();
-      if (!trimmed) return;
-      if (trimmed.startsWith("DAY")) return;
+        rawTimetableText.split("\n").forEach(line => {
+            const trimmed = line.trim();
+            if (!trimmed) return;
+            if (trimmed.startsWith("DAY")) return;
 
-      const parts = trimmed.split(/\s+/);
-      if (parts.length < 19) return;
+            const parts = trimmed.split(/\s+/);
+            if (parts.length < 19) return;
 
-      const dayToken = parts[0];
-      const section = parts[1];
-      const dayKey = dayMap[dayToken.slice(0, 3).toUpperCase()];
-      if (!dayKey) return;
+            const dayToken = parts[0];
+            const section = parts[1];
+            const dayKey = dayMap[dayToken.slice(0, 3).toUpperCase()];
+            if (!dayKey) return;
 
-      const room1 = parts[2];
-      const s8_9 = parts[3];
+            const room1 = parts[2];
+            const s8_9 = parts[3];
 
-      const room2 = parts[4];
-      const s9_10 = parts[5];
-      const s10_11 = parts[6];
+            const room2 = parts[4];
+            const s9_10 = parts[5];
+            const s10_11 = parts[6];
 
-      const room3 = parts[7];
-      const s11_12 = parts[8];
+            const room3 = parts[7];
+            const s11_12 = parts[8];
 
-      const room4 = parts[9];
-      const s12_1 = parts[10];
-      const s1_2 = parts[11];
+            const room4 = parts[9];
+            const s12_1 = parts[10];
+            const s1_2 = parts[11];
 
-      const room5 = parts[12];
-      const s2_3 = parts[13];
+            const room5 = parts[12];
+            const s2_3 = parts[13];
 
-      const room6 = parts[14];
-      const s3_4 = parts[15];
+            const room6 = parts[14];
+            const s3_4 = parts[15];
 
-      const room7 = parts[16];
-      const s4_5 = parts[17];
-      const s5_6 = parts[18];
+            const room7 = parts[16];
+            const s4_5 = parts[17];
+            const s5_6 = parts[18];
 
-      const n8_9 = normalizeSubject(s8_9);
-      const n9_10 = normalizeSubject(s9_10);
-      const n10_11 = normalizeSubject(s10_11);
-      const n11_12 = normalizeSubject(s11_12);
-      const n12_1 = normalizeSubject(s12_1);
-      const n1_2 = normalizeSubject(s1_2);
-      const n2_3 = normalizeSubject(s2_3);
-      const n3_4 = normalizeSubject(s3_4);
-      const n4_5 = normalizeSubject(s4_5);
-      const n5_6 = normalizeSubject(s5_6);
+            const n8_9 = normalizeSubject(s8_9);
+            const n9_10 = normalizeSubject(s9_10);
+            const n10_11 = normalizeSubject(s10_11);
+            const n11_12 = normalizeSubject(s11_12);
+            const n12_1 = normalizeSubject(s12_1);
+            const n1_2 = normalizeSubject(s1_2);
+            const n2_3 = normalizeSubject(s2_3);
+            const n3_4 = normalizeSubject(s3_4);
+            const n4_5 = normalizeSubject(s4_5);
+            const n5_6 = normalizeSubject(s5_6);
 
-      const slots = [];
+            const slots = [];
 
-      function addSlot(label, subj, roomToken) {
-        if (!subj) return;
-        slots.push({
-          time: label,
-          subject: subj,
-          room: roomForSlot(roomToken, subj)
+            function addSlot(label, subj, roomToken) {
+                if (!subj) return;
+                slots.push({
+                    time: label,
+                    subject: subj,
+                    room: roomForSlot(roomToken, subj)
+                });
+            }
+
+            addSlot("08:00 – 09:00", n8_9, room1);
+            addSlot("09:00 – 10:00", n9_10, room2);
+            addSlot("10:00 – 11:00", n10_11, room2);
+            addSlot("11:00 – 12:00", n11_12, room3);
+            addSlot("12:00 – 01:00", n12_1, room4);
+            addSlot("01:00 – 02:00", n1_2, room4);
+            addSlot("02:00 – 03:00", n2_3, room5);
+            addSlot("03:00 – 04:00", n3_4, room6);
+            addSlot("04:00 – 05:00", n4_5, room7);
+            addSlot("05:00 – 06:00", n5_6, room7);
+
+            if (!timetableData[section]) timetableData[section] = {};
+            timetableData[section][dayKey] = slots;
         });
-      }
 
-      addSlot("08:00 – 09:00", n8_9, room1);
-      addSlot("09:00 – 10:00", n9_10, room2);
-      addSlot("10:00 – 11:00", n10_11, room2);
-      addSlot("11:00 – 12:00", n11_12, room3);
-      addSlot("12:00 – 01:00", n12_1, room4);
-      addSlot("01:00 – 02:00", n1_2, room4);
-      addSlot("02:00 – 03:00", n2_3, room5);
-      addSlot("03:00 – 04:00", n3_4, room6);
-      addSlot("04:00 – 05:00", n4_5, room7);
-      addSlot("05:00 – 06:00", n5_6, room7);
+        const sectionSelect = document.getElementById("sectionSelect");
+        const daySelect = document.getElementById("daySelect");
+        const timetableBody = document.getElementById("timetableBody");
 
-      if (!timetableData[section]) timetableData[section] = {};
-      timetableData[section][dayKey] = slots;
-    });
+        const sections = Object.keys(timetableData).sort((a, b) => {
+            const na = parseInt(a.split("-")[1], 10);
+            const nb = parseInt(b.split("-")[1], 10);
+            if (isNaN(na) || isNaN(nb)) return a.localeCompare(b);
+            return na - nb;
+        });
 
-    const sectionSelect = document.getElementById("sectionSelect");
-    const daySelect = document.getElementById("daySelect");
-    const timetableBody = document.getElementById("timetableBody");
+        sections.forEach(sec => {
+            const opt = document.createElement("option");
+            opt.value = sec;
+            opt.textContent = sec;
+            sectionSelect.appendChild(opt);
+        });
 
-    const sections = Object.keys(timetableData).sort((a, b) => {
-      const na = parseInt(a.split("-")[1], 10);
-      const nb = parseInt(b.split("-")[1], 10);
-      if (isNaN(na) || isNaN(nb)) return a.localeCompare(b);
-      return na - nb;
-    });
+        function renderTimetable() {
+            const section = sectionSelect.value;
+            const day = daySelect.value;
 
-    sections.forEach(sec => {
-      const opt = document.createElement("option");
-      opt.value = sec;
-      opt.textContent = sec;
-      sectionSelect.appendChild(opt);
-    });
+            timetableBody.innerHTML = "";
 
-    function renderTimetable() {
-      const section = sectionSelect.value;
-      const day = daySelect.value;
+            if (!section || !day) return;
 
-      timetableBody.innerHTML = "";
+            const sectionData = timetableData[section] || {};
+            const slots = sectionData[day] || [];
 
-      if (!section || !day) return;
+            if (!slots.length) {
+                const row = document.createElement("tr");
+                const cell = document.createElement("td");
+                cell.colSpan = 3;
+                cell.className = "text-center text-muted py-4";
+                cell.textContent = "No classes found for this section & day.";
+                row.appendChild(cell);
+                timetableBody.appendChild(row);
+                return;
+            }
 
-      const sectionData = timetableData[section] || {};
-      const slots = sectionData[day] || [];
+            slots.forEach(slot => {
+                const tr = document.createElement("tr");
 
-      if (!slots.length) {
-        const row = document.createElement("tr");
-        const cell = document.createElement("td");
-        cell.colSpan = 3;
-        cell.className = "text-center text-muted py-4";
-        cell.textContent = "No classes found for this section & day.";
-        row.appendChild(cell);
-        timetableBody.appendChild(row);
-        return;
-      }
+                const tdTime = document.createElement("td");
+                tdTime.textContent = slot.time;
+                tr.appendChild(tdTime);
 
-      slots.forEach(slot => {
-        const tr = document.createElement("tr");
+                const tdSubject = document.createElement("td");
+                tdSubject.textContent = slot.subject;
+                tr.appendChild(tdSubject);
 
-        const tdTime = document.createElement("td");
-        tdTime.textContent = slot.time;
-        tr.appendChild(tdTime);
+                const tdRoom = document.createElement("td");
+                tdRoom.textContent = slot.room || "-";
+                tr.appendChild(tdRoom);
 
-        const tdSubject = document.createElement("td");
-        tdSubject.textContent = slot.subject;
-        tr.appendChild(tdSubject);
-
-        const tdRoom = document.createElement("td");
-        tdRoom.textContent = slot.room || "-";
-        tr.appendChild(tdRoom);
-
-        timetableBody.appendChild(tr);
-      });
-    }
-
-    function getTodayKey() {
-      const d = new Date().getDay(); // 0=Sun,1=Mon,...6=Sat
-      switch (d) {
-        case 1: return "monday";
-        case 2: return "tuesday";
-        case 3: return "wednesday";
-        case 4: return "thursday";
-        case 5: return "friday";
-        default: return "monday"; // weekend -> default Monday
-      }
-    }
-
-    sectionSelect.addEventListener("change", renderTimetable);
-    daySelect.addEventListener("change", renderTimetable);
-
-    // Initial selection: first section + today's actual weekday
-    if (sections.length) {
-      sectionSelect.value = sections[0];
-    }
-    daySelect.value = getTodayKey();
-    renderTimetable();
-
-    // ---- Install App nav link behaviour: scroll + auto-expand instructions ----
-    const installNavLink = document.querySelector('a[href="#install-app"]');
-    if (installNavLink) {
-      installNavLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.getElementById("install-app");
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
+                timetableBody.appendChild(tr);
+            });
         }
-        const collapseEl = document.getElementById("installInstructions");
-        if (collapseEl && window.bootstrap) {
-          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
-          bsCollapse.show();
+
+        function getTodayKey() {
+            const d = new Date().getDay();
+            switch (d) {
+                case 1: return "monday";
+                case 2: return "tuesday";
+                case 3: return "wednesday";
+                case 4: return "thursday";
+                case 5: return "friday";
+                default: return "monday";
+            }
         }
-      });
-    }
-  </script>
+
+        sectionSelect.addEventListener("change", renderTimetable);
+        daySelect.addEventListener("change", renderTimetable);
+
+
+        if (sections.length) {
+            sectionSelect.value = sections[0];
+        }
+        daySelect.value = getTodayKey();
+        renderTimetable();
+
+
+        const installNavLink = document.querySelector('a[href="#install-app"]');
+        if (installNavLink) {
+            installNavLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.getElementById("install-app");
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                const collapseEl = document.getElementById("installInstructions");
+                if (collapseEl && window.bootstrap) {
+                    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
+                    bsCollapse.show();
+                }
+            });
+        }
+    </script>
 
 </body>
 
